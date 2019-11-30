@@ -27,6 +27,7 @@ var app = {
 
  //  JSX Static variable (CHALLENGE)
 //  {varName} helps to refrence a defined variable 
+//  CHALLENGE: use object attributes from 'user' object 
  var templateTwo = ( 
      <div>
         <h1>{userName.toUpperCase()}</h1>
