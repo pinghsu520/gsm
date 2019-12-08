@@ -1,8 +1,23 @@
 console.log("App.js is running!");
 
-// In this file, we are learning about Arrays in JSX.
-//  For example, an array of JSX 
+// In this file, we are learning about Conditional 
+// Rendering in JSX using IF STATEMENT, TERNARY OPERATOR
+//  and LOGICAL OPERATOR 
+// 
+// IF Statement:
+//  if(condition){
+//     return value/stirng/etc. 
+//  }else {
+//    ...
+//  }
+// 
+// Ternary Operators:
+//  condition ? true : false
+// 
+// Logical and operator:
+//  Example -> true && true 
 
+//  App OBJECT: title/subtitle (CHALLENGE)
 
 const app = {
     title: 'Indecision App',
@@ -38,9 +53,6 @@ const removeAll = () => {
     render();
 };
 const appRoot = document.getElementById('app');
-
-// const numbers = [55, 101, 1000];
-
 // JSX - JavaScript XML (Provided by REACT)
 // JSX Static variable
 const render = () => {
@@ -51,17 +63,9 @@ const render = () => {
            {app.options.length > 0 ? <p>Here are your options</p> : <p>No options</p>}
            <p>{app.options.length}</p>
            <button onClick={removeAll}>Remove All</button>
-           {
-               /* numbers.map((number) => {
-                return <p key={number}>Number: {number}</p>;
-
-               }) */
-           }
            <ol>
-            {app.options.map ((item) => {
-                return <li key={item}>{item}</li>;
-
-            })}
+            <li>Item One</li>
+            <li>Item Two</li>
            </ol>
            <form onSubmit={onFormSubmit}> 
                <input type="text" name="option" placeholder="option"/>

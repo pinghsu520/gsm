@@ -19,7 +19,7 @@ console.log("App.js is running!");
 
 //  App OBJECT: title/subtitle (CHALLENGE)
 
- app = {
+const app = {
     title: 'Indecision App',
     subtitle: 'Put your life in the hands of a computer',
     options: ['One', 'Two']
@@ -31,49 +31,53 @@ console.log("App.js is running!");
 // CHALLENGE: (1) Only render the subtitle (and p tag) IF subtitle 
 // exist and (2) render new p tag - IF options.length > 0 'Here are your
 // options"; "No options" otherwise  
- var template = (
+ const template = (
  <div>
     <h1>{app.title}</h1>
     {app.subtitle && <p>{app.subtitle}</p>}
     {app.options.length > 0 ? <p>Here are your options</p> : <p>No options</p>}
  </div>
  );
-//  User OBJECT: filled with user's personal information
- var user = {
-     name: 'Hamzah Firman',
-     age: 21,
-     location: 'Tucson, AZ'
 
- };
-// Down below are User inputs in order to make the app dynamic 
- var userName = 'Hamzah Firman';
- var userAge = 21;
- var userLocation = 'Tucson,AZ';
+//   Attributes:  'id', 'className', 
+let count = 0;
+// Functions below will be executed whenever user click buttons
+// 
+// Function: Prints 'addOne' 
+const addOne = () => {
+    count ++;
+    renderCounterApp();
+};
+// Function: Prints 'minusOne'
+const minusOne = () => {
+    count --;
+    renderCounterApp();
+};
+// Function: Prints 'reset'
+const reset = () => {
+    count = 0;
+    renderCounterApp();
+};
 
-// This function have a conditional to check if user's location is 
-// existed. 
-function getLocation(location) {
-    if(location){
-        return <p>Location: {location}</p>;
-    }    
-}
- //  JSX Static variable (CHALLENGE)
-//  syntax: {varName} helps to refrence a defined variable 
-//  conditional: ternary operator -> checks whether user name exist
-//  conditional: logical operator -> checks whether user age exist and it's 
-//  greater or equal to 18 
-//  conditionl: if statement -> (in function) checks if location exist
- var templateTwo = ( 
-     <div>
-        <h1>{user.name ? user.name : 'Anonymous'}</h1>
-        {(user.age && user.age >= 18) && <p>Age: {user.age}</p>}
-        {getLocation(user.location)}
-     </div>
- )
 // AppRoot fecthes element from HTML file using document API and by its ID using 
 // getElemntById method.
-var appRoot = document.getElementById('app');
+const appRoot = document.getElementById('app');
 
 // Render our app 
 // Method : .render(arg1 [JSX you would like to render], arg2 [Where would you like to render?])
-ReactDOM.render(template, appRoot);
+
+
+const renderCounterApp = () => {
+    const templateTwo = (
+        <div> 
+            <h1>Count: {count}</h1>
+            <div><button onClick={addOne}>+1</button></div>
+            <div><button onClick={minusOne}>-1</button></div>
+            <button onClick={reset}>reset</button>
+        </div>
+     );
+
+     ReactDOM.render(templateTwo, appRoot);
+};
+
+renderCounterApp();

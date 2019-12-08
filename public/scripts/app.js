@@ -2,114 +2,102 @@
 
 console.log("App.js is running!");
 
-// In this file, we are learning about Conditional 
-// Rendering in JSX using IF STATEMENT, TERNARY OPERATOR
-//  and LOGICAL OPERATOR 
-// 
-// IF Statement:
-//  if(condition){
-//     return value/stirng/etc. 
-//  }else {
-//    ...
-//  }
-// 
-// Ternary Operators:
-//  condition ? true : false
-// 
-// Logical and operator:
-//  Example -> true && true 
+// In this file, we are learning about Arrays in JSX.
+//  For example, an array of JSX 
 
-//  App OBJECT: title/subtitle (CHALLENGE)
 
 var app = {
     title: 'Indecision App',
     subtitle: 'Put your life in the hands of a computer',
-    options: ['One', 'Two']
+    options: []
 };
+// 'onFormSubmit' prevents full page refresh using .preventDefault method 
+// and no data is added to the URL 
+// 'e'- event object
+var onFormSubmit = function onFormSubmit(e) {
+    e.preventDefault();
 
-function getValue(arg1) {
-    if (arg1.length > 0) {
-        return 'Here are your options';
-    } else {
-        return 'No options';
+    // Hold user's value
+    var option = e.target.elements.option.value;
+
+    // Checks if option is empty or not and push into the array
+    // if it's not empty 
+    if (option) {
+        app.options.push(option);
+
+        // Reset the value 
+        e.target.elements.option.value = '';
+        // Re-rendering whenever a new option is added
+        render();
     }
-}
-// JSX - JavaScript XML (Provided by REACT)
-// JSX Static variable
-var template = React.createElement(
-    'div',
-    null,
-    React.createElement(
-        'h1',
-        null,
-        app.title
-    ),
-    app.subtitle && React.createElement(
-        'p',
-        null,
-        'Subtitle:',
-        app.subtitle
-    ),
-    app.options.length > 0 ? React.createElement(
-        'p',
-        null,
-        'Here are your options'
-    ) : React.createElement(
-        'p',
-        null,
-        'No options'
-    )
-);
-//  User OBJECT: filled with user's personal information
-var user = {
-    name: 'Hamzah Firman',
-    age: 21,
-    location: 'Tucson, AZ'
-
 };
-// Down below are User inputs in order to make the app dynamic 
-var userName = 'Hamzah Firman';
-var userAge = 21;
-var userLocation = 'Tucson,AZ';
-
-// This function have a conditional to check if user's location is 
-// existed. 
-function getLocation(location) {
-    if (location) {
-        return React.createElement(
-            'p',
-            null,
-            'Location: ',
-            location
-        );
-    }
-}
-//  JSX Static variable (CHALLENGE)
-//  syntax: {varName} helps to refrence a defined variable 
-//  conditional: ternary operator -> checks whether user name exist
-//  conditional: logical operator -> checks whether user age exist and it's 
-//  greater or equal to 18 
-//  conditionl: if statement -> (in function) checks if location exist
-var templateTwo = React.createElement(
-    'div',
-    null,
-    React.createElement(
-        'h1',
-        null,
-        user.name ? user.name : 'Anonymous'
-    ),
-    user.age && user.age >= 18 && React.createElement(
-        'p',
-        null,
-        'Age: ',
-        user.age
-    ),
-    getLocation(user.location)
-);
-// AppRoot fecthes element from HTML file using document API and by its ID using 
-// getElemntById method.
+// Removes all items from the array by setting the array to EMPTY
+var removeAll = function removeAll() {
+    app.options = [];
+    render();
+};
 var appRoot = document.getElementById('app');
 
-// Render our app 
-// Method : .render(arg1 [JSX you would like to render], arg2 [Where would you like to render?])
-ReactDOM.render(template, appRoot);
+// const numbers = [55, 101, 1000];
+
+// JSX - JavaScript XML (Provided by REACT)
+// JSX Static variable
+var render = function render() {
+    var template = React.createElement(
+        'div',
+        null,
+        React.createElement(
+            'h1',
+            null,
+            app.title
+        ),
+        app.subtitle && React.createElement(
+            'p',
+            null,
+            app.subtitle
+        ),
+        app.options.length > 0 ? React.createElement(
+            'p',
+            null,
+            'Here are your options'
+        ) : React.createElement(
+            'p',
+            null,
+            'No options'
+        ),
+        React.createElement(
+            'p',
+            null,
+            app.options.length
+        ),
+        React.createElement(
+            'button',
+            { onClick: removeAll },
+            'Remove All'
+        ),
+        React.createElement(
+            'ol',
+            null,
+            app.options.map(function (item) {
+                return React.createElement(
+                    'li',
+                    { key: item },
+                    item
+                );
+            })
+        ),
+        React.createElement(
+            'form',
+            { onSubmit: onFormSubmit },
+            React.createElement('input', { type: 'text', name: 'option', placeholder: 'option' }),
+            React.createElement(
+                'button',
+                null,
+                'Add Option'
+            )
+        )
+    );
+    ReactDOM.render(template, appRoot);
+};
+
+render();
