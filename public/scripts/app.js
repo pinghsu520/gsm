@@ -31,10 +31,21 @@ var onFormSubmit = function onFormSubmit(e) {
         render();
     }
 };
+
 // Removes all items from the array by setting the array to EMPTY
 var removeAll = function removeAll() {
     app.options = [];
     render();
+};
+// Chooses random option from the array
+// VARIABLES: a.) randomNum - Randomly chooses an estimated number which correspond to 
+//            the length of the 'options' array (Inclusive). b.) option - Chooses a random item from
+//            the 'options' array 
+// METHODS: a.) Math.floor - Estimates number b.) Math.random - chooses a random number 
+var onMakeDecision = function onMakeDecision() {
+    var randomNum = Math.floor(Math.random() * app.options.length);
+    var option = app.options[randomNum];
+    alert(option);
 };
 var appRoot = document.getElementById('app');
 
@@ -66,9 +77,9 @@ var render = function render() {
             'No options'
         ),
         React.createElement(
-            'p',
-            null,
-            app.options.length
+            'button',
+            { disabled: app.options.length === 0, onClick: onMakeDecision },
+            'What should I do?'
         ),
         React.createElement(
             'button',
