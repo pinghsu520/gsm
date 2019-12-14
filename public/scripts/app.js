@@ -1,114 +1,61 @@
 'use strict';
 
-console.log("App.js is running!");
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-// In this file, we are learning about Arrays in JSX.
-//  For example, an array of JSX 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+// Building es6 classes 
 
-var app = {
-    title: 'Indecision App',
-    subtitle: 'Put your life in the hands of a computer',
-    options: []
-};
-// 'onFormSubmit' prevents full page refresh using .preventDefault method 
-// and no data is added to the URL 
-// 'e'- event object
-var onFormSubmit = function onFormSubmit(e) {
-    e.preventDefault();
+// CLASS DESCRIPTION : This class shares a personal informations
+//  about a person (i.e. person's name, person's age).
+// ARGS: name - A person's name (default='Anynomous');
+// age - A person's age (default=Unknown);
+// METHODS: getGreeting - Returns a greeting including a 
+// person's name; getAge - Returns a person's age;
+var Person = function () {
+    function Person() {
+        var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Anynomous';
+        var age = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'Unknown';
 
-    // Hold user's value
-    var option = e.target.elements.option.value;
+        _classCallCheck(this, Person);
 
-    // Checks if option is empty or not and push into the array
-    // if it's not empty 
-    if (option) {
-        app.options.push(option);
-
-        // Reset the value 
-        e.target.elements.option.value = '';
-        // Re-rendering whenever a new option is added
-        render();
+        this.name = name;
+        this.age = age;
     }
-};
+    // Method #1 
 
-// Removes all items from the array by setting the array to EMPTY
-var removeAll = function removeAll() {
-    app.options = [];
-    render();
-};
-// Chooses random option from the array
-// VARIABLES: a.) randomNum - Randomly chooses an estimated number which correspond to 
-//            the length of the 'options' array (Inclusive). b.) option - Chooses a random item from
-//            the 'options' array 
-// METHODS: a.) Math.floor - Estimates number b.) Math.random - chooses a random number 
-var onMakeDecision = function onMakeDecision() {
-    var randomNum = Math.floor(Math.random() * app.options.length);
-    var option = app.options[randomNum];
-    alert(option);
-};
-var appRoot = document.getElementById('app');
 
-// const numbers = [55, 101, 1000];
+    _createClass(Person, [{
+        key: 'getGreeting',
+        value: function getGreeting() {
+            return 'Hi. I am ' + this.name;
+        }
 
-// JSX - JavaScript XML (Provided by REACT)
-// JSX Static variable
-var render = function render() {
-    var template = React.createElement(
-        'div',
-        null,
-        React.createElement(
-            'h1',
-            null,
-            app.title
-        ),
-        app.subtitle && React.createElement(
-            'p',
-            null,
-            app.subtitle
-        ),
-        app.options.length > 0 ? React.createElement(
-            'p',
-            null,
-            'Here are your options'
-        ) : React.createElement(
-            'p',
-            null,
-            'No options'
-        ),
-        React.createElement(
-            'button',
-            { disabled: app.options.length === 0, onClick: onMakeDecision },
-            'What should I do?'
-        ),
-        React.createElement(
-            'button',
-            { onClick: removeAll },
-            'Remove All'
-        ),
-        React.createElement(
-            'ol',
-            null,
-            app.options.map(function (item) {
-                return React.createElement(
-                    'li',
-                    { key: item },
-                    item
-                );
-            })
-        ),
-        React.createElement(
-            'form',
-            { onSubmit: onFormSubmit },
-            React.createElement('input', { type: 'text', name: 'option', placeholder: 'option' }),
-            React.createElement(
-                'button',
-                null,
-                'Add Option'
-            )
-        )
-    );
-    ReactDOM.render(template, appRoot);
-};
+        // Method #2 
 
-render();
+    }, {
+        key: 'getAge',
+        value: function getAge() {
+            return 'I am ' + this.age;
+        }
+
+        // Method #3 
+
+    }, {
+        key: 'getDescription',
+        value: function getDescription() {
+            return this.name + ' is ' + this.age + ' year(s) old';
+        }
+    }]);
+
+    return Person;
+}();
+
+// Below are instances:
+
+
+var me = new Person("Hamzah", 20);
+console.log(me.getDescription());
+
+var other = new Person();
+console.log(other.getDescription());
