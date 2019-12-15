@@ -1,89 +1,94 @@
-console.log("App.js is running!");
+// Transforming to REACT Component (with ES6 Classes)
+// Parent Component 
+//  CLASS: Renders all children classes 
+class Indecision extends React.Component {
+    render() {
+        // Props 
+        const title = 'Indecision';
+        const subtitle = 'Put your life in the hands of a computer';
+        const options = ['Hamzah', 'Ping', 'Tristan'];
+        return (
+            <div>
+                <Header title={title} subtitle={subtitle}/>
+                <Action/>
+                <Options options={options}/> 
+                <AddOption/>
+            </div>
+        );
 
-// In this file, we are learning about Arrays in JSX.
-//  For example, an array of JSX 
-
-
-const app = {
-    title: 'Indecision App',
-    subtitle: 'Put your life in the hands of a computer',
-    options: []
-};
-// 'onFormSubmit' prevents full page refresh using .preventDefault method 
-// and no data is added to the URL 
-// 'e'- event object
-const onFormSubmit = (e) => {
-    e.preventDefault();
-    
-    // Hold user's value
-    const option = e.target.elements.option.value;
-
-    // Checks if option is empty or not and push into the array
-    // if it's not empty 
-    if(option) {
-        app.options.push(option);
-
-        // Reset the value 
-        e.target.elements.option.value ='';
-        // Re-rendering whenever a new option is added
-        render();
-
+    }
+}
+// Child Component of Indecision #1 
+// Class: Renders title and subtitle Props 
+class Header extends React.Component {
+    // A special Method
+    // MEHTOD: Renders everything inside this class 
+    // PROPS:
+    render() {
+        return (
+            <div>
+            <h1>{this.props.title}</h1>
+            <h2>{this.props.subtitle}</h2>
+        </div>
+        );
         
     }
-    
+}
+
+// Child Component of Indecision #2 
+class Action extends React.Component {
+      // A special Method
+    // MEHTOD: Renders everything inside this class 
+    render() {
+        return (
+            <div>
+                <button>What should I do?</button>
+            </div>
+        );
+        
+    }
+};
+
+// Child Component of Indecision #3 
+class Options extends React.Component {
+    // A special Method
+    // MEHTOD: Renders everything inside this class 
+    render() {
+        return (
+            <div>
+                <p>{this.props.options.length}</p>
+                <Option optionArray={this.props.options}/>
+            </div>
+        );
+        
+    };
 };
 
 
-// Removes all items from the array by setting the array to EMPTY
-const removeAll = () => {
-    app.options = [];
-    render();
-};
-// Chooses random option from the array
-// VARIABLES: a.) randomNum - Randomly chooses an estimated number which correspond to 
-//            the length of the 'options' array (Inclusive). b.) option - Chooses a random item from
-//            the 'options' array 
-// METHODS: a.) Math.floor - Estimates number b.) Math.random - chooses a random number 
-const onMakeDecision = () => {
-    const randomNum = Math.floor(Math.random() * app.options.length);
-    const option = app.options[randomNum]
-    alert(option)
-};
-const appRoot = document.getElementById('app');
-
-// const numbers = [55, 101, 1000];
-
-// JSX - JavaScript XML (Provided by REACT)
-// JSX Static variable
-const render = () => {
-    const template = (
-        <div>
-           <h1>{app.title}</h1>
-           {app.subtitle && <p>{app.subtitle}</p>}
-           {app.options.length > 0 ? <p>Here are your options</p> : <p>No options</p>}
-           <button disabled={app.options.length === 0} onClick={onMakeDecision}>What should I do?</button>
-           <button onClick={removeAll}>Remove All</button>
-           {
-               /* numbers.map((number) => {
-                return <p key={number}>Number: {number}</p>;
-
-               }) */
-           }
-           <ol>
-            {app.options.map ((item) => {
-                return <li key={item}>{item}</li>;
-
-            })}
-           </ol>
-           <form onSubmit={onFormSubmit}> 
-               <input type="text" name="option" placeholder="option"/>
-               <button>Add Option</button>
-
-           </form>
-        </div>
-
-    );
-    ReactDOM.render(template, appRoot);
+// Child Component of Indecision #4 
+class AddOption extends React.Component {
+    // A special Method
+    // MEHTOD: Renders everything inside this class 
+    render() {
+        return (
+            <div>
+                AddOption component here.
+            </div>
+        );
+    }
 };
 
-render();
+// Child Component of Options #1 
+class Option extends React.Component {
+    render() {
+        return (
+            <div>
+                <p>{this.props.optionArray}</p>
+            </div>
+        );
+    }
+}
+
+
+ReactDOM.render(<Indecision/>, document.getElementById('app'));
+
