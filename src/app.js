@@ -1,6 +1,9 @@
 // Transforming to REACT Component (with ES6 Classes)
 // Parent Component 
 //  CLASS: Renders all children classes 
+
+//trolled
+
 class Indecision extends React.Component {
     render() {
         // Props 
