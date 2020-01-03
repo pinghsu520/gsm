@@ -10,35 +10,94 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 // Transforming to REACT Component (with ES6 Classes)
 // Parent Component 
-//  CLASS: Renders all children classes 
-var Indecision = function (_React$Component) {
-    _inherits(Indecision, _React$Component);
+// CLASS: Renders all children classes 
+// PROPS: title (str), subtitle (str) , options (array) 
+var IndecisionApp = function (_React$Component) {
+    _inherits(IndecisionApp, _React$Component);
 
-    function Indecision() {
-        _classCallCheck(this, Indecision);
+    function IndecisionApp(props) {
+        _classCallCheck(this, IndecisionApp);
 
-        return _possibleConstructorReturn(this, (Indecision.__proto__ || Object.getPrototypeOf(Indecision)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (IndecisionApp.__proto__ || Object.getPrototypeOf(IndecisionApp)).call(this, props));
+
+        _this.handlePick = _this.handlePick.bind(_this);
+        _this.handleDeleteOptions = _this.handleDeleteOptions.bind(_this);
+        _this.handleAddOption = _this.handleAddOption.bind(_this);
+        _this.state = {
+            options: []
+        };
+        return _this;
     }
 
-    _createClass(Indecision, [{
+    // Method #1
+    // Method: Randomly pick an option from the current array
+
+
+    _createClass(IndecisionApp, [{
+        key: 'handlePick',
+        value: function handlePick() {
+            var randomNum = Math.floor(Math.random() * this.state.options.length);
+            var option = this.state.options[randomNum];
+            alert(option);
+        }
+        // Method #2 
+        // Method: Removes all elements in the current array 
+
+    }, {
+        key: 'handleDeleteOptions',
+        value: function handleDeleteOptions() {
+            this.setState(function () {
+                return {
+                    options: []
+                };
+            });
+        }
+        // Method #3
+        // Method: Adds new option into the current array 
+
+    }, {
+        key: 'handleAddOption',
+        value: function handleAddOption(option) {
+            // Conditions
+            // #1 
+            if (!option) {
+                return 'Enter valid value to add item';
+            } else if (this.state.options.indexOf(option) > -1) {
+                return 'This option already exists';
+            };
+            // Concats a new array with a new option with the current 
+            // array
+            this.setState(function (prevState) {
+                return {
+                    options: prevState.options.concat(option)
+
+                };
+            });
+        }
+
+        // Method #4 
+        // Method: Renders all methods in IndecisionApp class
+
+    }, {
         key: 'render',
         value: function render() {
             // Props 
             var title = 'Indecision';
             var subtitle = 'Put your life in the hands of a computer';
-            var options = ['Hamzah', 'Ping', 'Tristan'];
             return React.createElement(
                 'div',
                 null,
                 React.createElement(Header, { title: title, subtitle: subtitle }),
-                React.createElement(Action, null),
-                React.createElement(Options, { options: options }),
-                React.createElement(AddOption, null)
+                React.createElement(Action, { hasOptions: this.state.options.length > 0,
+                    handlePick: this.handlePick }),
+                React.createElement(Options, { options: this.state.options,
+                    handleDeleteOptions: this.handleDeleteOptions }),
+                React.createElement(AddOption, { handleAddOption: this.handleAddOption })
             );
         }
     }]);
 
-    return Indecision;
+    return IndecisionApp;
 }(React.Component);
 // Child Component of Indecision #1 
 // Class: Renders title and subtitle Props 
@@ -81,6 +140,7 @@ var Header = function (_React$Component2) {
 }(React.Component);
 
 // Child Component of Indecision #2 
+// Class: Randomly pick an oprion and alert it
 
 
 var Action = function (_React$Component3) {
@@ -95,15 +155,18 @@ var Action = function (_React$Component3) {
     _createClass(Action, [{
         key: 'render',
 
-        // A special Method
-        // MEHTOD: Renders everything inside this class 
+
+        // MEHTOD: Renders everything inside this class
         value: function render() {
             return React.createElement(
                 'div',
                 null,
                 React.createElement(
                     'button',
-                    null,
+                    {
+                        onClick: this.props.handlePick,
+                        disabled: !this.props.hasOptions
+                    },
                     'What should I do?'
                 )
             );
@@ -129,18 +192,25 @@ var Options = function (_React$Component4) {
     _createClass(Options, [{
         key: 'render',
 
+
         // A special Method
         // MEHTOD: Renders everything inside this class 
         value: function render() {
-            return React.createElement(
-                'div',
-                null,
+            return (
+                // BELOW: Prints each item in the Array and each text is
+                // 'Option' class props. 
                 React.createElement(
-                    'p',
+                    'div',
                     null,
-                    this.props.options.length
-                ),
-                React.createElement(Option, { optionArray: this.props.options })
+                    React.createElement(
+                        'button',
+                        { onClick: this.props.handleDeleteOptions },
+                        'Remove All'
+                    ),
+                    this.props.options.map(function (item) {
+                        return React.createElement(Option, { key: item, itemText: item });
+                    })
+                )
             );
         }
     }]);
@@ -155,22 +225,64 @@ var Options = function (_React$Component4) {
 var AddOption = function (_React$Component5) {
     _inherits(AddOption, _React$Component5);
 
-    function AddOption() {
+    // This 'handleAddOption' below is not overridin the one in 
+    // 'IndecisionApp' class 
+    function AddOption(props) {
         _classCallCheck(this, AddOption);
 
-        return _possibleConstructorReturn(this, (AddOption.__proto__ || Object.getPrototypeOf(AddOption)).apply(this, arguments));
+        var _this5 = _possibleConstructorReturn(this, (AddOption.__proto__ || Object.getPrototypeOf(AddOption)).call(this, props));
+
+        _this5.handleAddOption = _this5.handleAddOption.bind(_this5);
+        _this5.state = {
+            error: undefined
+        };
+        return _this5;
     }
 
     _createClass(AddOption, [{
-        key: 'render',
+        key: 'handleAddOption',
+        value: function handleAddOption(item) {
+            // 'Item' is still an object 
+            // '.preventDefault()' - Prevents the page from refreshinng once users submitted 
+            item.preventDefault();
 
+            // Grabs 'item' text
+            // 'option' is item in text 
+            // ".trim" - Removes all white spaces 
+            var option = item.target.elements.option.value.trim();
+            var error = this.props.handleAddOption(option);
+
+            this.setState(function () {
+                return { error: error };
+            });
+        }
         // A special Method
         // MEHTOD: Renders everything inside this class 
+
+    }, {
+        key: 'render',
         value: function render() {
+            // Below: A Submit option form which allows users to add 
+            // a new option(s)
+            // 'OnSubmit' is similar to 'OnClick'
             return React.createElement(
                 'div',
                 null,
-                'AddOption component here.'
+                this.state.error && React.createElement(
+                    'p',
+                    null,
+                    this.state.error
+                ),
+                React.createElement(
+                    'form',
+                    { onSubmit: this.handleAddOption },
+                    React.createElement('input', { type: 'text', name: 'option', placeholder: 'option' }),
+                    React.createElement(
+                        'button',
+                        null,
+                        'Add Option'
+                    )
+                )
             );
         }
     }]);
@@ -197,11 +309,7 @@ var Option = function (_React$Component6) {
             return React.createElement(
                 'div',
                 null,
-                React.createElement(
-                    'p',
-                    null,
-                    this.props.optionArray
-                )
+                this.props.itemText
             );
         }
     }]);
@@ -209,4 +317,4 @@ var Option = function (_React$Component6) {
     return Option;
 }(React.Component);
 
-ReactDOM.render(React.createElement(Indecision, null), document.getElementById('app'));
+ReactDOM.render(React.createElement(IndecisionApp, null), document.getElementById('app'));
