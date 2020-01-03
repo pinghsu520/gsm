@@ -1,5 +1,6 @@
 // Transforming to REACT Component (with ES6 Classes)
 // Parent Component 
+<<<<<<< HEAD
 // CLASS: Renders all children classes 
 // PROPS: title (str), subtitle (str) , options (array) 
 class IndecisionApp extends React.Component {
@@ -51,6 +52,13 @@ class IndecisionApp extends React.Component {
 
     // Method #4 
     // Method: Renders all methods in IndecisionApp class
+=======
+//  CLASS: Renders all children classes 
+
+//trolled
+
+class Indecision extends React.Component {
+>>>>>>> 987d9bd4e5ab8e9cd4371c6c13547631dc9e697a
     render() {
         // Props 
         const title = 'Indecision';
