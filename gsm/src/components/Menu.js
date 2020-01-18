@@ -7,8 +7,8 @@ class Menu extends React.Component {
 	<div>
 
 		<div class="ui menu">
-		  <div class="header item">
-		    Community and Social Impact
+		  <div class="item">
+		    Home
 		  </div>
 		  <a class="item">
 		    Events
