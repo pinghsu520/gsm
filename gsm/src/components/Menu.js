@@ -1,5 +1,5 @@
 import React from 'react';
-
+import nat1 from '../images/nature1.jpeg';
 
 class Menu extends React.Component {
 	render() {
@@ -14,17 +14,35 @@ class Menu extends React.Component {
 		    Events
 		  </a>
 		  <a class="item">
-		    Sponsors and forms
+		    Sponsors and forms			
 		  </a>
 		  <a class="item">
-		    Press HQ
+		    Press HQ	
 		  </a>
 		  <a class="item">
-		    e-News
+		    e-News			
 		  </a>
 		</div>
 
+		<div class="ui raised very padded text container segment">
+		  <h2 class="ui header">Dogs Roles with Humans</h2>
+		  <p>BLAH BLAH</p>
+		  <p>BLAH</p>
+		</div>
+
+
+		<div class="ui divider"></div>
+		<img class="ui middle aligned large image" src={nat1}/>
+		<span>Middle Aligned</span>
+		<div class="ui divider"></div>
+		<img class="ui middle aligned circular large image" src={nat1}/>
+		<span>Middle Aligned</span>
+
+		<div class="ui divider"></div>
+		
 	</div>
+
+
 		)
 	}
 }
