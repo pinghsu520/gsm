@@ -1,19 +1,17 @@
 import React from 'react';
-import  Posts  from './components/';
+import  Banner  from './components/';
 import  Menu  from './components/Menu';
 import SlideShow from './components/slideShow';
 
 const App = () => {
   return (
-    <div>
-        HIs
-        
+    <div>      
         <br/>
         <br/>
         <br/>
         <br/>
 
-        <Posts />
+        <Banner />
 
         <br/>
         <br/>
