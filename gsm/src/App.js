@@ -5,10 +5,11 @@ import SlideShow from './components/slideShow';
 const App = () => {
   return (
     <div>
-        HI
+        HIs
+        
         <Posts />
         <Menu />
-        <SlideShow />
+  		<SlideShow />      
     </div>
   );
 };

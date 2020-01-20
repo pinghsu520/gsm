@@ -6,7 +6,7 @@ class Posts extends React.Component {
 		return (
 			<div>
 				<h1>
-					Postss
+					Posts
 				</h1>
 			</div>
 		)
