@@ -1,5 +1,9 @@
 import React from 'react';
-import nat1 from '../images/nature1.jpeg';
+
+import Image from 'react-bootstrap/Image'
+
+import flower from '../images/natureFlower.jpg';
+
 
 class Menu extends React.Component {
 	render() {
@@ -31,12 +35,8 @@ class Menu extends React.Component {
 		</div>
 
 
-		<div class="ui divider"></div>
-		<img class="ui middle aligned large image" src={nat1}/>
-		<span>Middle Aligned</span>
-		<div class="ui divider"></div>
-		<img class="ui middle aligned circular large image" src={nat1}/>
-		<span>Middle Aligned</span>
+		
+		<img class="ui fluid image" src={flower}/>
 
 		<div class="ui divider"></div>
 		
