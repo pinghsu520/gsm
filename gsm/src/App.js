@@ -4,6 +4,7 @@ import Menu  from './components/Menu';
 import SlideShow from './components/slideShow';
 import PastSuccess from './components/pastSuccess'
 import StepSuccess from './components/stepSuccess'
+import ContactUs from './components/contactForm'
 
 const App = () => {
   return (
@@ -37,12 +38,20 @@ const App = () => {
       <br/>
       <br/>
       <br/>  
-      <StepSuccess/>
+      <StepSuccess />
 
       <br/>
       <br/>
       <br/>
       <br/>
+
+      <ContactUs />
+
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+
 
     </div>
   );
