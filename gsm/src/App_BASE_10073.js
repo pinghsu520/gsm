@@ -2,16 +2,12 @@ import React from 'react';
 import Banner  from './components/';
 import Menu  from './components/Menu';
 import SlideShow from './components/slideShow';
-import PastSuccess from './components/pastSuccess';
-import StepSuccess from './components/stepSuccess';
-import WhatWeDo from './components/whatWeDo';
-import Buttons from './components/buttons';
-import Background from './components/cardbackground';
-
+import PastSuccess from './components/pastSuccess'
+import StepSuccess from './components/stepSuccess'
 
 const App = () => {
   return (
-    <div>     
+    <div>      
         <br/>
         <br/>
         <br/>
@@ -23,21 +19,14 @@ const App = () => {
         <br/>
         <br/>
 
-  		<Menu />
-        <Buttons />
-  		<br/>
-  		<br/>
-  		<br/>
-  		<br/> 
-  		<Background />
+  		<SlideShow />
 
-      <SlideShow />
-      <br/>
-      <br/>
-      <br/>
-      <br/>    
-    
-      <WhatWeDo />
+  		<br/>
+  		<br/>
+  		<br/>
+  		<br/>  
+
+      <Menu />
       <br/>
       <br/>
       <br/>
@@ -48,20 +37,12 @@ const App = () => {
       <br/>
       <br/>
       <br/>  
-      <StepSuccess />
+      <StepSuccess/>
 
       <br/>
       <br/>
       <br/>
       <br/>
-
-      <ContactUs />
-
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-
 
     </div>
   );
