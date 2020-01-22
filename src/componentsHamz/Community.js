@@ -4,7 +4,9 @@ import NonProfitRepresentation from './Sub-NonProfitRepresentation';
 import WhyThisNonProfit from './Sub-WhyThisNonProfit';
 import GoodTheyAreDoing from './Sub-GoodTheyAreDoing';
 import SocialImpact from './Sub-SocialImpact';
-import BoardOfDirectors from './Sub-BoardOfDirectors'
+import BoardOfDirectors from './Sub-BoardOfDirectors';
+import ConnectWithUs from './Sub-ConnectForm';
+
 
 class Community extends React.Component {
     render() {
@@ -17,6 +19,7 @@ class Community extends React.Component {
                     <GoodTheyAreDoing />
                     <SocialImpact />
                     <BoardOfDirectors />
+                    <ConnectWithUs />
                 </div>  
                 
         )

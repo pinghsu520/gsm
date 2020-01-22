@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Dropdown from './communityPages/Dropdown';
 
 
+
 const Header = () => (
   <header>
     <h1 class="ui center aligned header grey">

@@ -10,13 +10,14 @@ import ResponsibilityPage from '../components/communityPages/ResponsibilityPage'
 import NotFoundPage from '../components/NotFoundPage';
 import Header from '../components/Header';
 import Community from '../componentsHamz/Community';
+import Home from '../components/Home';
 
 const AppRouter = () => (
   <BrowserRouter>
     <div>
       <Header />
       <Switch>
-        <Route path="/" component={ExpenseDashboardPage} exact={true} />
+        <Route path="/" component={Home} exact={true} />
         <Route path="/community" component={Community} exact={true} />
         <Route path="/community/non_profit_representation" component={NPRepresentationPage} />
         <Route path="/community/why_non_profit" component={WhyNPPage} />
