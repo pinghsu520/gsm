@@ -1,9 +1,5 @@
 import React from 'react';
 
-import Image from 'react-bootstrap/Image'
-
-import flower from '../images/natureFlower.jpg';
-
 
 class Menu extends React.Component {
 	render() {
@@ -35,8 +31,6 @@ class Menu extends React.Component {
 		</div>
 
 
-		
-		<img class="ui fluid image" src={flower}/>
 
 		<div class="ui divider"></div>
 		
