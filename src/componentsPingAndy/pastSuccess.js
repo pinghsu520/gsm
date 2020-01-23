@@ -5,8 +5,8 @@ class pastSuccess extends React.Component {
 	render() {
 		return (
 			<div>
-					<div class="ui divider"></div>
-					<img class="ui fluid image" src={redFlower} />
+					<div className="ui divider"></div>
+					<img className="ui fluid image" src={redFlower} />
 
 			</div>
 		)

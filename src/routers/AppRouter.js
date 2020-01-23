@@ -13,7 +13,7 @@ import Community from '../componentsHamz/Community';
 import Home from '../components/Home';
 
 const AppRouter = () => (
-  <BrowserRouter>
+  <BrowserRouter >
     <div>
       <Header />
       <Switch>

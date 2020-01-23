@@ -9,10 +9,10 @@ class StepSuccess extends React.Component {
 					steps success class
 				</h1>
 
-				<div class="ui divider"></div>
+				<div className="ui divider"></div>
 
-				<img class="ui fluid image" src={lake} />
-				<div class="ui divider"></div>
+				<img className="ui fluid image" src={lake} />
+				<div className="ui divider"></div>
 			</div>
 		)
 	}
