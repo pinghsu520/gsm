@@ -40,19 +40,19 @@ class PhotoGrid extends React.Component {
     render() {
         return (
    
-            <div class="ui small images">
-            <img class="ui medium circular image" src="../images/image-5.jpg"></img>
-            <button class="ui inverted grey button">Rody Espanol<div>Business Developer</div></button>
-            <img class="ui medium circular image" src="../images/image-5.jpg"></img>
-            <button class="ui inverted grey button">Marc Beilin<div>Sales Manager</div></button>
-            <img class="ui medium circular image" src="../images/image-5.jpg"></img>
-            <button class="ui inverted grey button">Hamzah Firman<div>Software Engineer</div></button>
-            <img class="ui medium circular image" src="../images/image-5.jpg"></img>
-            <button class="ui inverted grey button">Tristan<div>Software Engineer</div></button>
-            <img class="ui medium circular image" src="../images/image-5.jpg"></img>
-            <button class="ui inverted grey button">Andy Le<div>Software Engineer</div></button>
-            <img class="ui medium circular image" src="../images/image-5.jpg"></img>
-            <button class="ui inverted grey button">Ping Hsu<div>Software Engineer</div></button>
+            <div className="ui small images">
+            <img className="ui medium circular image" src="../images/image-5.jpg"></img>
+            <button className="ui inverted grey button">Rody Espanol<div>Business Developer</div></button>
+            <img className="ui medium circular image" src="../images/image-5.jpg"></img>
+            <button className="ui inverted grey button">Marc Beilin<div>Sales Manager</div></button>
+            <img className="ui medium circular image" src="../images/image-5.jpg"></img>
+            <button className="ui inverted grey button">Hamzah Firman<div>Software Engineer</div></button>
+            <img className="ui medium circular image" src="../images/image-5.jpg"></img>
+            <button className="ui inverted grey button">Tristan<div>Software Engineer</div></button>
+            <img className="ui medium circular image" src="../images/image-5.jpg"></img>
+            <button className="ui inverted grey button">Andy Le<div>Software Engineer</div></button>
+            <img className="ui medium circular image" src="../images/image-5.jpg"></img>
+            <button className="ui inverted grey button">Ping Hsu<div>Software Engineer</div></button>
 </div>
 
         )

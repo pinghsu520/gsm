@@ -6,13 +6,13 @@ import Dropdown from './communityPages/Dropdown';
 
 const Header = () => (
   <header>
-    <h1 class="ui center aligned header grey">
+    <h1 className="ui center aligned header grey">
       <a href='/' className="ui image">
         <img className="ui image" src="../images/GSMLogo.jpg"/>
       </a>
-      <div class="content">
+      <div className="content">
         Gray Slate Media
-        <div class="sub header">A Company with a Heart</div>
+        <div className="sub header">A Company with a Heart</div>
       </div>
     </h1>
 

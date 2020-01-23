@@ -9,6 +9,18 @@ import ConnectWithUs from './Sub-ConnectForm';
 
 
 class Community extends React.Component {
+    state ={
+        fields: {}
+    }
+    
+    onChange = (updatedValue) => {
+        this.setState({
+            fields: {
+                ...this.state.fields,
+                ...updatedValue
+            }
+        });
+    };
     render() {
         return (
                 <div className="alert alert-primary" role="alert">
@@ -19,7 +31,8 @@ class Community extends React.Component {
                     <GoodTheyAreDoing />
                     <SocialImpact />
                     <BoardOfDirectors />
-                    <ConnectWithUs />
+                    <ConnectWithUs onChange={fields => this.onChange(fields)} />
+                    <p>{JSON.stringify(this.state.fields, null, 2)}</p>
                 </div>  
                 
         )
