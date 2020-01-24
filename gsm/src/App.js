@@ -55,7 +55,7 @@ const App = () => {
       <br/>
       <br/>
 
-      <ContactUs />
+
 
       <br/>
       <br/>
