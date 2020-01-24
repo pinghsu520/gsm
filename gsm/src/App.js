@@ -7,54 +7,60 @@ import StepSuccess from './components/stepSuccess';
 import WhatWeDo from './components/whatWeDo';
 import Buttons from './components/buttons';
 import Background from './components/cardbackground';
+import ScrollWheel from './components/scrollSnap/scrollWheel'
+
+import './components/scrollSnap/scrollSnap.css';
 
 
 const App = () => {
   return (
     <div>     
-        <br/>
-        <br/>
-        <br/>
-        <br/>
 
         <Banner />
 
-        <br/>
-        <br/>
-        <br/>
-
   		<Menu />
+
+
         <Buttons />
-  		<br/>
-  		<br/>
-  		<br/>
-  		<br/> 
-  		<Background />
 
-      <SlideShow />
-      <br/>
-      <br/>
-      <br/>
-      <br/>    
+      <section class="test">
+            <Background />
+      </section>
+      
+
+  		
+
+
+      <section class="test">
+            <SlideShow />
+      </section>
+      
+      
+  
     
-      <WhatWeDo />
-      <br/>
-      <br/>
-      <br/>
-      <br/>    
+      <section class="test">
+            <WhatWeDo />
+      </section>
+      
     
-      <PastSuccess />
-      <br/>
-      <br/>
-      <br/>
-      <br/>  
-      <StepSuccess />
+    
+      <section class="test">
+           <PastSuccess />
+      </section>
+    
+    
+
+      <section class="test">
+           <StepSuccess />
+      </section>
+      
 
       <br/>
       <br/>
       <br/>
       <br/>
 
+     
 
 
       <br/>
