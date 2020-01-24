@@ -8,10 +8,9 @@ import WhatWeDo from './components/whatWeDo';
 import Buttons from './components/buttons';
 import Background from './components/cardbackground';
 
-
 const App = () => {
   return (
-    <div>     
+    <div>      
         <br/>
         <br/>
         <br/>
@@ -48,20 +47,12 @@ const App = () => {
       <br/>
       <br/>
       <br/>  
-      <StepSuccess />
+      <StepSuccess/>
 
       <br/>
       <br/>
       <br/>
       <br/>
-
-      <ContactUs />
-
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-
 
     </div>
   );
