@@ -14,7 +14,7 @@ import './components/scrollSnap/scrollSnap.css';
 
 const App = () => {
   return (
-    <div>     
+    <div class="container"> 
 
         <Banner />
 
@@ -23,36 +23,37 @@ const App = () => {
 
         <Buttons />
 
-      <section class="test">
-            <Background />
-      </section>
       
+      
+      <div class="content">
+                    <Background />
+      </div>
 
   		
+      <div class="content">
+                    <SlideShow />
+      </div>
 
-
-      <section class="test">
-            <SlideShow />
-      </section>
-      
+    
+      <div class="content">
+                    <WhatWeDo />
+      </div>
       
   
     
-      <section class="test">
-            <WhatWeDo />
-      </section>
-      
+   
+      <div class="content">
+                   <PastSuccess />
+      </div>
     
     
-      <section class="test">
-           <PastSuccess />
-      </section>
-    
+   
+      <div class="content">
+                  <StepSuccess />
+      </div>
     
 
-      <section class="test">
-           <StepSuccess />
-      </section>
+    
       
 
       <br/>
@@ -60,8 +61,9 @@ const App = () => {
       <br/>
       <br/>
 
-     
 
+
+    
 
       <br/>
       <br/>
