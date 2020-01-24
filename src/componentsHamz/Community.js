@@ -25,7 +25,7 @@ class Community extends React.Component {
         return (
                 <div className="alert alert-primary" role="alert">
                     Welcome to our Community Page
-                    <Navbar />
+                    {/* <Navbar /> */}
                     <NonProfitRepresentation />
                     <WhyThisNonProfit />
                     <GoodTheyAreDoing />
