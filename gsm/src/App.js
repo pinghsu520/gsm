@@ -19,26 +19,14 @@ const App = () => {
     
     <div>
 
-      <script>
-        $(function() {
-          $.scrollify({
-            section : ".example-classname",
-          });
-        });
-      </script>
- 
-
-
+        <script src="./components/scrollify.js"></script>
     <body>
-      <div class="example-classname">
-      	<WhatWeDo />
+      <div class="section-class-name" data-section-name="home">
+      		fsfdsfs
       </div>
-      	      
-      <div class="example-classname">
-
-       <PastSuccess />
-      </div>
+      <div class="section-class-name" data-section-name="about"></div>
     </body>
+ 
     
       
 
