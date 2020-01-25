@@ -1,24 +1,17 @@
 import React, { Component } from 'react';
 import ReactSnapScroll from 'react-snap-scroll';
-import './App.css';
-import Menu  from './components/Menu';
-import SlideShow from './components/slideShow';
-import PastSuccess from './components/pastSuccess';
-import StepSuccess from './components/stepSuccess';
-import WhatWeDo from './components/whatWeDo';
-import Buttons from './components/buttons';
-import Background from './components/cardbackground';
-import './index.css';
+import './scrollWheel.css';
+
 
 
 const children = [
     <div className="page red" key="red">
         <h2><span>Snap</span><span>Scroll</span></h2>
-        <StepSuccess />
+  
     </div>,
     <div className="page orange" key="orange">
         <h2><span>Snap</span><span>Scroll</span></h2>
-        <WhatWeDo />
+ 
     </div>,
     <div className="page yellow" key="yellow">
         <h2><span>Snap</span><span>Scroll</span></h2>
@@ -54,7 +47,7 @@ class App extends Component {
         const { transition, index } = this.state;
 
         return (
-            <div className="App">
+            <div className="scrollWheel">
                 <ReactSnapScroll
                     transition={ transition }
                     indexChanged={ this.indexChanged }

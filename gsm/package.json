@@ -12,7 +12,10 @@
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
+    "react-fullpage": "^0.1.19",
     "react-scripts": "3.3.0",
+    "react-scrollify": "^1.0.4",
+    "react-snap-scroll": "0.0.5",
     "reactstrap": "^8.4.0"
   },
   "scripts": {
