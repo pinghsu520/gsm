@@ -25,6 +25,7 @@ import FutureEventsPage from '../components/sponsorPages/FutureEventsPage';
 import SponsorsPage from '../components/sponsorPages/SponsorsPage';
 import SponsorTiersPage from '../components/sponsorPages/SponsorTiersPage';
 import SponsorFormPage from '../components/sponsorPages/SponsorFormPage';
+import Footer from '../components/Footer';
 
 
 const AppRouter = () => (
@@ -57,6 +58,7 @@ const AppRouter = () => (
         <Route path="/news/saftey" component={ConcernsPage} />
         <Route component={NotFoundPage} />
       </Switch>
+      <Footer />
     </div>
   </BrowserRouter>
 );

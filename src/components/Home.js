@@ -5,8 +5,8 @@ import SlideShow from '../componentsPingAndy/slideShow';
 import PastSuccess from '../componentsPingAndy/pastSuccess';
 import StepSuccess from '../componentsPingAndy/stepSuccess';
 
-const Home = () => {
-  return (
+
+const Home = () => (
     <div>      
         {/* <br/>
         <br/>
@@ -45,7 +45,6 @@ const Home = () => {
       <br/>
 
     </div>
-  );
-};
+);
 
 export default Home;
