@@ -1,35 +1,33 @@
 import React from 'react';
-
+import './styleMenu.css';
 
 class Menu extends React.Component {
 	render() {
 		return (
 	<div>
 
-		<div class="ui menu">
-		  <div class="item">
+		
+
+
+		<div class="ui red three item inverted compact menu menuStyle ">
+		  <a class="active item">
 		    Home
-		  </div>
+		  </a>
 		  <a class="item">
 		    Events
 		  </a>
 		  <a class="item">
-		    Sponsors and forms			
+		    Sponsors and forms
 		  </a>
 		  <a class="item">
-		    Press HQ	
+		    Press HQ
 		  </a>
 		  <a class="item">
-		    e-News			
+		    e-News
 		  </a>
-		</div>
+		
 
-		<div class="ui raised very padded text container segment">
-		  <h2 class="ui header">Dogs Roles with Humans</h2>
-		  <p>BLAH BLAH</p>
-		  <p>BLAH</p>
 		</div>
-
 
 
 		<div class="ui divider"></div>

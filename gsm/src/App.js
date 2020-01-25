@@ -11,10 +11,11 @@ import Background from './components/cardbackground';
 import './index.css';
 
 
+
 const children = [
     <div className="page red" key="red">
         <h2><span>Snap</span><span>Scroll</span></h2>
-        <StepSuccess />
+        <Menu />
     </div>,
     <div className="page orange" key="orange">
         <h2><span>Snap</span><span>Scroll</span></h2>
