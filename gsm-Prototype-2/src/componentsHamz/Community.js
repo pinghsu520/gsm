@@ -1,5 +1,5 @@
 import React from 'react';
-import SubPages from './Sub-BoardOfDirectors';
+import SubPages from './SubPages';
 import ConnectWithUs from './Sub-ConnectForm';
 import './Community.css';
 
