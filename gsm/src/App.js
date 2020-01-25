@@ -10,49 +10,35 @@ import Background from './components/cardbackground';
 import ScrollWheel from './components/scrollSnap/scrollWheel'
 
 import './components/scrollSnap/scrollSnap.css';
-
+import 'scrollify.js';
 
 const App = () => {
   return (
-    <div class="container"> 
 
-        <Banner />
-
-  		<Menu />
-
-
-        <Buttons />
-
-      
-      
-      <div class="content">
-                    <Background />
-      </div>
-
-  		
-      <div class="content">
-                    <SlideShow />
-      </div>
 
     
-      <div class="content">
-                    <WhatWeDo />
-      </div>
-      
-  
-    
-   
-      <div class="content">
-                   <PastSuccess />
-      </div>
-    
-    
-   
-      <div class="content">
-                  <StepSuccess />
-      </div>
-    
+    <div>
 
+      <script>
+        $(function() {
+          $.scrollify({
+            section : ".example-classname",
+          });
+        });
+      </script>
+ 
+
+
+    <body>
+      <div class="example-classname">
+      	<WhatWeDo />
+      </div>
+      	      
+      <div class="example-classname">
+
+       <PastSuccess />
+      </div>
+    </body>
     
       
 
