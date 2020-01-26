@@ -20,14 +20,11 @@ export default function BoardOfDirectorsPage(){
 
   <Box>
   <Box className={classes.root}>
-  <h1 className="ui center aligned huge header">
+  <h2 className="ui center aligned huge header">
     Board of Directors
-  </h1>
+  </h2>
   </Box>
-  <Box bgcolor="secondary.main">
-  <br></br>
-  </Box>
-  <Box bgcolor="warning.main">
+  <Box>
   <div className="ui link cards">
   <div className="card">
     <div className="image">

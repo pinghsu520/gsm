@@ -165,28 +165,13 @@ export default function Header(props){
             title={"Sponsors & Forms"} 
             mainLink={"sponsors"}
             subtitles={{
-              forms : "Forms",
-              donations : "Donations",
               tiers: "Sponsor Tiers",
-              future_events : "Future Events"
             }}
           />
           <Dropdown 
             title={"Press HQ"} 
             mainLink={"press"}
             subtitles={{
-              contact_us : "Contact Us",
-              stay_in_touch : "Stay in Touch",
-            }}
-          />
-        
-          <Dropdown 
-            title={"News"} 
-            mainLink={"news"}
-            subtitles={{
-              concerns : "Concerns",
-              fun : "Fun Stuff",
-              saftey : "Be Careful"
             }}
           />
           </nav>

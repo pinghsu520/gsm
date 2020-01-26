@@ -8,6 +8,7 @@ import { NavLink } from 'react-router-dom';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import Button from './materialUiComps/Button';
+import ButtonBase from '@material-ui/core/ButtonBase';
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -18,6 +19,72 @@ const useStyles = makeStyles(theme => ({
       li: {
         listStyle: 'none',
       },
+    },
+    imageWrapper: {
+      position: 'relative',
+      display: 'block',
+      padding: 0,
+      borderRadius: 0,
+      height: '60vh',
+      [theme.breakpoints.down('sm')]: {
+        width: '100% !important',
+        height: 100,
+      },
+      '&:hover': {
+        zIndex: 1,
+      },
+      '&:hover $imageBackdrop': {
+        opacity: 0.15,
+      },
+      '&:hover $imageMarked': {
+        opacity: 0,
+      },
+      '&:hover $imageTitle': {
+        border: '4px solid currentColor',
+      },
+    },
+    imageSrc: {
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      top: 0,
+      bottom: 0,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center 40%',
+    },
+    imageButton: {
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      top: 0,
+      bottom: 0,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      color: theme.palette.common.white,
+    },
+    imageBackdrop: {
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      top: 0,
+      bottom: 0,
+      background: theme.palette.common.black,
+      opacity: 0.5,
+      transition: theme.transitions.create('opacity'),
+    },
+    imageTitle: {
+      position: 'relative',
+      padding: `${theme.spacing(2)}px ${theme.spacing(4)}px 14px`,
+    },
+    imageMarked: {
+      height: 3,
+      width: 18,
+      background: theme.palette.common.white,
+      position: 'absolute',
+      bottom: -2,
+      left: 'calc(50% - 9px)',
+      transition: theme.transitions.create('opacity'),
     },
     appBar: {
       borderBottom: `1px solid ${theme.palette.divider}`,
@@ -75,22 +142,22 @@ const footers = [
     },
     {
       title: 'Sponsors',
-      description: ['Forms', 'Donations', 'Sponsor Tiers', 'Future Events'],
+      description: ['Sponsor Tiers'],
       link: 'sponsors',
-      links: ['forms', 'donations', 'future_events', 'tiers'],
+      links: ['tiers'],
     },
     {
       title: 'Press',
-      description: ['Contact Us', 'Stay in Touch', 'News'],
+      description: ['Contact Us'],
       link: 'press',
-      links: ['contact_us', 'stay_in_touch', 'news'],
+      links: ['press'],
     },
-    {
+    /* {
       title: 'News',
       description: ['Concerns', 'Fun Stuff', 'Be Careful'],
       link: 'news',
       links: ['concerns', 'fun', 'news', 'safety'],
-    }
+    } */
   ];
 
   function Copyright() {
@@ -106,29 +173,53 @@ const footers = [
     );
   }
 
+const Connect = () => {
+  const classes = useStyles();
+  const image = {
+      url:
+        'https://images.unsplash.com/photo-1500964757637-c85e8a162699?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=778&q=80',
+      title: 'Connect With Us',
+      width: '100%',
+  };
+  return(
+  <ButtonBase
+    href="https://forms.gle/8De6zYV7CyLXP5EF8"
+    target="_blank"
+    key={image.title}
+    className={classes.imageWrapper}
+    style={{
+      width: image.width,
+    }}
+  >
+    <div
+      className={classes.imageSrc}
+      style={{
+        backgroundImage: `url(${image.url})`,
+      }}
+    />
+    <div className={classes.imageBackdrop} />
+    <div className={classes.imageButton}>
+      <Typography
+        component="h3"
+        variant="h2"
+        fontSize= "12"
+        color="inherit"
+        className={classes.imageTitle}
+      >
+        {image.title}
+        <div className={classes.imageMarked} />
+      </Typography>
+    </div>
+  </ButtonBase>
+  )}  
 export default function Footer(){
     const classes = useStyles();
     const count = 0;
     return (
     <React.Fragment>
-    <Box >
-    <Grid container spacing={1} justify="space-evenly">
-      <Grid item xs={6} sm={2} key="button">
-        <Button
-          color="secondary"
-          variant="contained"
-          size="large"
-          className={classes.button}
-          component="a"
-          href="https://forms.gle/BiAUrCi9hLmLBCYe6"
-        >
-          Connect with us
-        </Button>
-      </Grid>
-    </Grid>
-   
+    <Connect></Connect>
     <Container maxWidth="md" component="footer" className={classes.footer}>
-        <Grid container spacing={5} justify="space-evenly">
+        <Grid container spacing={4} justify="space-evenly">
           {footers.map(footer => (
             <Grid item xs={6} sm={2} key={footer.title}>
               <NavLink 
@@ -177,6 +268,5 @@ export default function Footer(){
         </Box>
         
       </Container>
-      </Box>
       </React.Fragment>
     )};

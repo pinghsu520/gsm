@@ -47,17 +47,9 @@ const AppRouter = () => (
         <Route path="/events/schedule" component={SchedulePage} />
         <Route path="/events/contact" component={ContactsPage} />
         <Route path="/sponsors" component={SponsorsPage} exact={true}/>
-        <Route path="/sponsors/forms" component={SponsorFormPage} />
         <Route path="/sponsors/donations" component={DonationPage} />
-        <Route path="/sponsors/future_events" component={FutureEventsPage} />
         <Route path="/sponsors/tiers" component={SponsorTiersPage} />
         <Route path="/press" component={PressPage} exact={true}/>
-        <Route path="/press/contact_us" component={ContactUsPage} />
-        <Route path="/press/stay_in_touch" component={SubscribePage} />
-        <Route path="/news" component={NewsPage} exact={true}/>
-        <Route path="/news/concerns" component={ConcernsPage} />
-        <Route path="/news/fun" component={FunPage} />
-        <Route path="/news/saftey" component={ConcernsPage} />
         <Route component={NotFoundPage} />
       </Switch>
       
