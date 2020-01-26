@@ -1,9 +1,22 @@
+import withRoot from '../materialUiComps/withRoot';
+// --- Post bootstrap -----
 import React from 'react';
+import ProductHero from './views/ProductHero';
+import ProductValues from './views/ProductValues';
 
-const PressPage = () => (
-  <div>
-    This is from my PressPage component
-  </div>
-);
+function PressPage() {
+  return (
+    <React.Fragment>
+      {/* <AppAppBar /> */}
+      <ProductHero />
+      <ProductValues />
+      {/* <ProductCategories /> */}
+      {/* <ProductHowItWorks /> */}
+      {/* <ProductCTA /> */}
+      {/* <ProductSmokingHero /> */}
+      {/* <AppFooter /> */}
+    </React.Fragment>
+  );
+}
 
-export default PressPage;
+export default withRoot(PressPage);

@@ -26,6 +26,7 @@ import SponsorsPage from '../components/sponsorPages/SponsorsPage';
 import SponsorTiersPage from '../components/sponsorPages/SponsorTiersPage';
 import SponsorFormPage from '../components/sponsorPages/SponsorFormPage';
 import Footer from '../components/Footer';
+import AboutUs from '../components/AboutUs';
 
 
 const AppRouter = () => (
@@ -34,6 +35,7 @@ const AppRouter = () => (
       <Header />
       <Switch>
         <Route path="/" component={Home} exact={true} />
+        <Route path="/about_us" component={AboutUs} exact={true} />
         <Route path="/community" component={Community} exact={true} />
         <Route path="/community/non_profit_representation" component={NPRepresentationPage} />
         <Route path="/community/why_non_profit" component={WhyNPPage} />
@@ -58,8 +60,9 @@ const AppRouter = () => (
         <Route path="/news/saftey" component={ConcernsPage} />
         <Route component={NotFoundPage} />
       </Switch>
-      <Footer />
+      
     </div>
+    <Footer />
   </BrowserRouter>
 );
 

@@ -4,8 +4,10 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
+import { NavLink } from 'react-router-dom';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
+import Button from './materialUiComps/Button';
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -55,22 +57,40 @@ const useStyles = makeStyles(theme => ({
   }));
 
 const footers = [
-    {
+    /* {
       title: 'Company',
       description: ['Team', 'History', 'Contact us', 'Locations'],
+    }, */
+    {
+      title: 'Community',
+      description: ['Non-Profit', 'Board of Directors', 'Social Impact', 'Responcibility'],
+      link: 'community',
+      links: ['non_profit_representation', 'why_non_profit', 'board_of_directors', 'social_impact','responcibility'],
     },
     {
-      title: 'Features',
-      description: ['Cool stuff', 'Random feature', 'Team feature', 'Developer stuff', 'Another one'],
+      title: 'Events',
+      description: ['Upcoming', 'Schedule Meeting', 'Contact'],
+      link: 'events',
+      links: ['upcoming', 'schedule', 'contact'],
     },
     {
-      title: 'Resources',
-      description: ['Resource', 'Resource name', 'Another resource', 'Final resource'],
+      title: 'Sponsors',
+      description: ['Forms', 'Donations', 'Sponsor Tiers', 'Future Events'],
+      link: 'sponsors',
+      links: ['forms', 'donations', 'future_events', 'tiers'],
     },
     {
-      title: 'Legal',
-      description: ['Privacy policy', 'Terms of use'],
+      title: 'Press',
+      description: ['Contact Us', 'Stay in Touch', 'News'],
+      link: 'press',
+      links: ['contact_us', 'stay_in_touch', 'news'],
     },
+    {
+      title: 'News',
+      description: ['Concerns', 'Fun Stuff', 'Be Careful'],
+      link: 'news',
+      links: ['concerns', 'fun', 'news', 'safety'],
+    }
   ];
 
   function Copyright() {
@@ -85,23 +105,67 @@ const footers = [
       </Typography>
     );
   }
+
 export default function Footer(){
     const classes = useStyles();
+    const count = 0;
     return (
     <React.Fragment>
+    <Box >
+    <Grid container spacing={1} justify="space-evenly">
+      <Grid item xs={6} sm={2} key="button">
+        <Button
+          color="secondary"
+          variant="contained"
+          size="large"
+          className={classes.button}
+          component="a"
+          href="https://forms.gle/BiAUrCi9hLmLBCYe6"
+        >
+          Connect with us
+        </Button>
+      </Grid>
+    </Grid>
+   
     <Container maxWidth="md" component="footer" className={classes.footer}>
-        <Grid container spacing={4} justify="space-evenly">
+        <Grid container spacing={5} justify="space-evenly">
           {footers.map(footer => (
-            <Grid item xs={6} sm={3} key={footer.title}>
-              <Typography variant="h6" color="textPrimary" gutterBottom>
+            <Grid item xs={6} sm={2} key={footer.title}>
+              <NavLink 
+                to={'/'+footer.link} 
+                activeClassName="is-active" 
+                variant="h6" 
+                color="textPrimary"
+                style={{ 
+                  color: "black",
+                  fontSize: 14 
+                }}
+                activeStyle={{
+                  fontWeight: "bold",
+                  color: "black"
+                }}
+              >
                 {footer.title}
-              </Typography>
+              </NavLink>
+              
               <ul>
-                {footer.description.map(item => (
+              
+                {footer.description.map((item, index) => (
                   <li key={item}>
-                    <Link href="#" variant="subtitle1" color="textSecondary">
+                    <NavLink 
+                      to={'/'+footer.link +'/'+footer.links[index]}
+                      activeClassName="is-active"                       
+                      style={{ 
+                        color: 'grey',
+                        fontSize: 10 
+                      }}
+                      activeStyle={{
+                        fontWeight: "bold",
+                        color: "black"
+                      }}
+                    >
                       {item}
-                    </Link>
+                    </NavLink>
                   </li>
                 ))}
               </ul>
@@ -113,5 +177,6 @@ export default function Footer(){
         </Box>
         
       </Container>
+      </Box>
       </React.Fragment>
     )};

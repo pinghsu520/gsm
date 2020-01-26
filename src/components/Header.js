@@ -16,7 +16,6 @@ import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
-import ElevateScroll from "./ElevateScroll";
 import IconButton from '@material-ui/core/IconButton';
 import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
@@ -125,6 +124,7 @@ export default function Header(props){
   return (
     // <ElevateScroll {...props}>
       // <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
+      <Box >
         <Toolbar className={classes.toolbar}>
           <a href='/' className="ui image">
             <img className="ui small image" src="../images/GSMLogo.jpg"/>
@@ -134,6 +134,13 @@ export default function Header(props){
             Gray Slate Media
           </Typography> */}
           <nav>
+          <div className="ui compact menu">
+        <div className="ui simple dropdown item">
+          <NavLink to='/about_us' activeClassName="is-active">About Us</NavLink>
+          <div className="menu">
+          </div>
+        </div>
+      </div>
           <Dropdown 
           title={"Community"} 
           mainLink={"community"}
@@ -203,6 +210,7 @@ export default function Header(props){
             <MoreIcon />
           </IconButton> */}
         </Toolbar>
+        </Box>
       // </AppBar>
       //  </ElevateScroll>
   )}

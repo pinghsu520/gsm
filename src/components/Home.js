@@ -1,9 +1,9 @@
 import React from 'react';
 //import Banner  from '../componentsPingAndy/';
-import Menu  from '../componentsPingAndy/Menu';
-import SlideShow from '../componentsPingAndy/slideShow';
-import PastSuccess from '../componentsPingAndy/pastSuccess';
-import StepSuccess from '../componentsPingAndy/stepSuccess';
+import Menu  from './PingAndy/Menu';
+import SlideShow from './PingAndy/slideShow';
+import PastSuccess from './PingAndy/pastSuccess';
+import StepSuccess from './PingAndy/stepSuccess';
 
 
 const Home = () => (
