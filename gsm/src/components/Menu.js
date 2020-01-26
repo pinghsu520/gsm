@@ -1,5 +1,4 @@
 import React from 'react';
-import './styleMenu.css';
 
 class Menu extends React.Component {
 	render() {
@@ -9,7 +8,7 @@ class Menu extends React.Component {
 		
 
 
-		<div class="ui red three item inverted compact menu menuStyle ">
+		<div class="ui red six item inverted compact menu">
 		  <a class="active item">
 		    Home
 		  </a>
@@ -30,7 +29,6 @@ class Menu extends React.Component {
 		</div>
 
 
-		<div class="ui divider"></div>
 		
 	</div>
 

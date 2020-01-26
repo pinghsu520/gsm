@@ -8,21 +8,23 @@ import StepSuccess from './components/stepSuccess';
 import WhatWeDo from './components/whatWeDo';
 import Buttons from './components/buttons';
 import Background from './components/cardbackground';
+import BootMenu from './components/BootMenu';
 import './index.css';
 
 
 
 const children = [
-    <div className="page red" key="red">
-        <h2><span>Snap</span><span>Scroll</span></h2>
-        <Menu />
+    <div className="Slideshow red" key="red">
+
+        <SlideShow />
     </div>,
     <div className="page orange" key="orange">
         <h2><span>Snap</span><span>Scroll</span></h2>
-        <WhatWeDo />
+        <pastSuccess />
     </div>,
     <div className="page yellow" key="yellow">
         <h2><span>Snap</span><span>Scroll</span></h2>
+        <WhatWeDo />
     </div>,
     <div className="page green" key="green">
         <h2><span>Snap</span><span>Scroll</span></h2>
@@ -51,18 +53,20 @@ class App extends Component {
     }
 
     render() {
-
+      
         const { transition, index } = this.state;
 
         return (
+      
             <div className="App">
+            <BootMenu />
                 <ReactSnapScroll
                     transition={ transition }
                     indexChanged={ this.indexChanged }
                 >
                     { children.map(child => child) }
                 </ReactSnapScroll>
-                <div className="controls">
+                {/*<div className="controls">
                     <form>
                         <h3>Transition</h3>
                         <select onChange={ this.transitionChanged } name="transition">
@@ -74,7 +78,7 @@ class App extends Component {
                             <option value="cube-top-bottom">Cube Top / From Bottom</option>
                         </select>
                     </form>
-                </div>
+                </div>*/}
                 <div className="pagination">
                     { index + 1 } / { children.length }
                 </div>

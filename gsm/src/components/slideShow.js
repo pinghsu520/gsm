@@ -10,7 +10,6 @@ class SlideShow extends React.Component {
 		return (
 			<div>
 				<h1>
-					This is start of slideshow
 				</h1>
 				
 				<Carousel>
