@@ -7,7 +7,7 @@ class pastSuccess extends React.Component {
 			<div>
 					<div class="ui divider"></div>
 					<img class="ui fluid image" src={redFlower} />
-
+					//Width: 2560 px , Height: 1600 px
 			</div>
 		)
 	}
