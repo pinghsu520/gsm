@@ -10,20 +10,19 @@ import Buttons from './components/buttons';
 import Background from './components/cardbackground';
 import BootMenu from './components/BootMenu';
 import './index.css';
+import Box from './components/container';
 
 // test
 
 const children = [
     <div className="Slideshow red" key="red">
-
         <SlideShow />
     </div>,
     <div className="page orange" key="orange">
-        <h2><span>Snap</span><span>Scroll</span></h2>
-        <pastSuccess />
+        
+        <PastSuccess />
     </div>,
     <div className="page yellow" key="yellow">
-        <h2><span>Snap</span><span>Scroll</span></h2>
         <WhatWeDo />
     </div>,
     <div className="page green" key="green">

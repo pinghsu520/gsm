@@ -1,3 +1,6 @@
+
+
+
 .App {
 
     position: relative;
@@ -55,6 +58,8 @@
 
 .App .orange {
     background: #FF8C00;
+    background-image: url('https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400&q=80');
+
 }
 
 .App .yellow {
