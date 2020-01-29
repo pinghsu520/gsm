@@ -27,12 +27,13 @@ import SponsorTiersPage from '../components/sponsorPages/SponsorTiersPage';
 import SponsorFormPage from '../components/sponsorPages/SponsorFormPage';
 import Footer from '../components/Footer';
 import AboutUs from '../components/AboutUs';
+import BootMenu from '../components/master/BootMenu';
 
 
 const AppRouter = () => (
   <BrowserRouter >
     <div>
-      <Header />
+      <BootMenu />
       <Switch>
         <Route path="/" component={Home} exact={true} />
         <Route path="/about_us" component={AboutUs} exact={true} />
@@ -52,9 +53,9 @@ const AppRouter = () => (
         <Route path="/press" component={PressPage} exact={true}/>
         <Route component={NotFoundPage} />
       </Switch>
-      
+      <Footer />
     </div>
-    <Footer />
+    
   </BrowserRouter>
 );
 
