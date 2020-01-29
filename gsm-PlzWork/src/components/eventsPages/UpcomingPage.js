@@ -90,58 +90,76 @@ function ProductCategories(props) {
     {
       url:
         'https://images.unsplash.com/photo-1534081333815-ae5019106622?auto=format&fit=crop&w=400&q=80',
-      title: 'Runaway Tour - Post Malone',
+      title: 'January 2020',
       width: '40%',
     },
     {
       url:
         'https://images.unsplash.com/photo-1531299204812-e6d44d9a185c?auto=format&fit=crop&w=400&q=80',
-      title: 'Massage',
+      title: 'February 2020',
       width: '20%',
     },
     {
       url:
         'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=400&q=80',
-      title: 'Hiking',
+      title: 'March 2020',
       width: '40%',
     },
     {
       url:
         'https://images.unsplash.com/photo-1453747063559-36695c8771bd?auto=format&fit=crop&w=400&q=80',
-      title: 'Tour',
+      title: 'April 2020',
       width: '38%',
     },
     {
       url:
         'https://images.unsplash.com/photo-1523309996740-d5315f9cc28b?auto=format&fit=crop&w=400&q=80',
-      title: 'Gastronomy',
+      title: 'May 2020',
       width: '38%',
     },
     {
       url:
         'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=400&q=80',
-      title: 'Shopping',
+      title: 'June 2020',
       width: '24%',
     },
     {
       url:
         'https://images.unsplash.com/photo-1506941433945-99a2aa4bd50a?auto=format&fit=crop&w=400&q=80',
-      title: 'Walking',
+      title: 'July 2020',
       width: '40%',
     },
     {
       url:
         'https://images.unsplash.com/photo-1533727937480-da3a97967e95?auto=format&fit=crop&w=400&q=80',
-      title: 'Fitness',
+      title: 'August 2020',
       width: '20%',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1518136247453-74e7b5265980?auto=format&fit=crop&w=400&q=80',
-      title: 'Reading',
+        'https://images.unsplash.com/photo-1525439989537-9584b5b4deea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=60',
+      title: 'September 2020',
       width: '40%',
     },
-  ];
+  {
+    url:
+      'https://images.unsplash.com/photo-1515103315473-6fb1f12ad433?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=60',
+    title: 'October 2020',
+    width: '40%',
+  },
+{
+  url:
+    'https://images.unsplash.com/photo-1518136247453-74e7b5265980?auto=format&fit=crop&w=400&q=80',
+  title: 'November 2020',
+  width: '40%',
+},
+{
+  url:
+    'https://images.unsplash.com/photo-1484818261101-b15d9ea02b7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=60',
+  title: 'December 2020',
+  width: '40%',
+},
+]; 
 
   return (
     <Container className={classes.root} component="section">
