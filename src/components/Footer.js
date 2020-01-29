@@ -10,6 +10,14 @@ import Box from '@material-ui/core/Box';
 import Button from './materialUiComps/Button';
 import ButtonBase from '@material-ui/core/ButtonBase';
 
+
+  import PropTypes from 'prop-types';
+  import { withStyles } from '@material-ui/core/styles';
+  import ProductHeroLayout from '../components/sponsorPages/views/ProductHeroLayout';
+
+  const backgroundImage =
+    'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400&q=80';
+  
 const useStyles = makeStyles(theme => ({
     '@global': {
       ul: {
@@ -25,7 +33,7 @@ const useStyles = makeStyles(theme => ({
       display: 'block',
       padding: 0,
       borderRadius: 0,
-      height: '60vh',
+      height: '50vh',
       [theme.breakpoints.down('sm')]: {
         width: '100% !important',
         height: 100,
@@ -121,6 +129,24 @@ const useStyles = makeStyles(theme => ({
         paddingBottom: theme.spacing(6),
       },
     },
+    background: {
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundColor: '#7fc7d9', // Average color of the background image.
+      backgroundPosition: 'center',
+    },
+    button: {
+      minWidth: 200,
+    },
+    h5: {
+      marginBottom: theme.spacing(4),
+      marginTop: theme.spacing(4),
+      [theme.breakpoints.up('sm')]: {
+        marginTop: theme.spacing(10),
+      },
+    },
+    more: {
+      marginTop: theme.spacing(2),
+    },
   }));
 
 const footers = [
@@ -162,7 +188,7 @@ const footers = [
 
   function Copyright() {
     return (
-      <Typography variant="body2" color="textSecondary" align="center">
+      <Typography variant="body2" color="grey" align="center">
         {'Copyright © '}
         <Link color="inherit" href="https://grayslate-test.firebaseapp.com/">
           Gray Slate
@@ -172,7 +198,7 @@ const footers = [
       </Typography>
     );
   }
-
+  
 const Connect = () => {
   const classes = useStyles();
   const image = {
@@ -182,35 +208,49 @@ const Connect = () => {
       width: '100%',
   };
   return(
-  <ButtonBase
-    href="https://forms.gle/8De6zYV7CyLXP5EF8"
-    target="_blank"
-    key={image.title}
-    className={classes.imageWrapper}
-    style={{
-      width: image.width,
-    }}
-  >
-    <div
-      className={classes.imageSrc}
-      style={{
-        backgroundImage: `url(${image.url})`,
-      }}
-    />
-    <div className={classes.imageBackdrop} />
-    <div className={classes.imageButton}>
-      <Typography
-        component="h3"
-        variant="h2"
-        fontSize= "12"
-        color="inherit"
-        className={classes.imageTitle}
-      >
-        {image.title}
-        <div className={classes.imageMarked} />
-      </Typography>
-    </div>
-  </ButtonBase>
+    <ProductHeroLayout backgroundClassName={classes.background}>
+        {/* Increase the network loading priority of the background image. */}
+        <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />
+        
+        <Typography color="inherit" align="center" variant="h2" className={classes.h5}>
+          Make TODAY the FUTURE
+        </Typography>
+        <ButtonBase
+          href="https://forms.gle/8De6zYV7CyLXP5EF8"
+          target="_blank"
+          key={image.title}
+          className={classes.imageWrapper}
+          style={{
+            width: image.width,
+          }}
+        >
+          <div
+            className={classes.imageSrc}
+            style={{
+              backgroundImage: `url(${image.url})`,
+            }}
+          />
+          <div className={classes.imageBackdrop} />
+          <div className={classes.imageButton}>
+            <Typography
+              component="h3"
+              variant="h2"
+              fontSize= "12"
+              color="inherit"
+              className={classes.imageTitle}
+            >
+              {image.title}
+              <div className={classes.imageMarked} />
+            </Typography>
+            
+          </div>
+        </ButtonBase>
+        <Typography variant="h4" color="inherit" className={classes.more}>
+          Give Us a Call (000)000-0000
+        </Typography>
+      <Copyright />
+      </ProductHeroLayout>
+      
   )}  
 export default function Footer(){
     const classes = useStyles();
@@ -218,7 +258,7 @@ export default function Footer(){
     return (
     <React.Fragment>
     <Connect></Connect>
-    <Container maxWidth="md" component="footer" className={classes.footer}>
+    {/* <Container maxWidth="md" component="footer" className={classes.footer}>
         <Grid container spacing={4} justify="space-evenly">
           {footers.map(footer => (
             <Grid item xs={6} sm={2} key={footer.title}>
@@ -267,6 +307,7 @@ export default function Footer(){
           <Copyright />
         </Box>
         
-      </Container>
+      </Container> */}
+     
       </React.Fragment>
     )};

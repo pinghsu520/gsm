@@ -1,6 +1,7 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/core/styles';
+import Members from './ProductCategories';
 
 const useStyles = makeStyles({
   root: {
@@ -26,98 +27,6 @@ export default function BoardOfDirectorsPage(){
   </Box>
   <Box>
   <div className="ui link cards">
-  <div className="card">
-    <div className="image">
-      <img src="/images/tristan.jpg"/>
-    </div>
-    <div className="content">
-      <div className="header">Tristan Farrell</div>
-      <div className="meta">
-        <a>Co-Founder and Software Developer</a>
-      </div>
-      <div className="description">
-        Tristan is the GOAT
-      </div>
-    </div>
-    <div className="extra content">
-      <span className="right floated">
-        Joined in 2014
-      </span>
-      <span>
-        <i className="user icon"></i>
-        151 Friends
-      </span>
-    </div>
-  </div>
-  <div className="card">
-    <div className="image">
-      <img src="/images/ping.jpg"/>
-    </div>
-    <div className="content">
-      <div className="header">Ping Hsu</div>
-      <div className="meta">
-        <a>Co-Founder and Software Developer</a>
-      </div>
-      <div className="description">
-        Ping is the GOAT
-      </div>
-    </div>
-    <div className="extra content">
-      <span className="right floated">
-        Joined in 2014
-      </span>
-      <span>
-        <i className="user icon"></i>
-        151 Friends
-      </span>
-    </div>
-  </div>
-  <div className="card">
-    <div className="image">
-      <img src="/images/hamzah.jpg"/>
-    </div>
-    <div className="content">
-      <div className="header">Hamzah Firman</div>
-      <div className="meta">
-        <a>Co-Founder and Software Developer</a>
-      </div>
-      <div className="description">
-        Hamzah is the GOAT
-      </div>
-    </div>
-    <div className="extra content">
-      <span className="right floated">
-        Joined in 2014
-      </span>
-      <span>
-        <i className="user icon"></i>
-        151 Friends
-      </span>
-    </div>
-  </div>
-  <div className="card">
-    <div className="image">
-      <img src="/images/andy.jpg"/>
-    </div>
-    <div className="content">
-      <div className="header">Andy Le</div>
-      <div className="meta">
-        <a>Co-Founder and Software Developer</a>
-      </div>
-      <div className="description">
-        Andy is the GOAT
-      </div>
-    </div>
-    <div className="extra content">
-      <span className="right floated">
-        Joined in 2014
-      </span>
-      <span>
-        <i className="user icon"></i>
-        151 Friends
-      </span>
-    </div>
-  </div>
   <div className="card">
     <div className="image">
       <img src="/images/image-2.jpg"/>
@@ -164,8 +73,101 @@ export default function BoardOfDirectorsPage(){
       </span>
     </div>
   </div>
+  <div className="card">
+    <div className="image">
+      <img src="/images/ping.jpg"/>
+    </div>
+    <div className="content">
+      <div className="header">Ping Hsu</div>
+      <div className="meta">
+        <a>Co-Founder and Software Developer</a>
+      </div>
+      <div className="description">
+        Ping is a student at the University of Arizona
+      </div>
+    </div>
+    <div className="extra content">
+      <span className="right floated">
+        Joined in 2014
+      </span>
+      <span>
+        <i className="user icon"></i>
+        151 Friends
+      </span>
+    </div>
+  </div>
+  <div className="card">
+    <div className="image">
+      <img src="/images/hamzah.jpg"/>
+    </div>
+    <div className="content">
+      <div className="header">Hamzah Firman</div>
+      <div className="meta">
+        <a>Co-Founder and Software Developer</a>
+      </div>
+      <div className="description">
+        Hamzah is a student at the University of Arizona
+      </div>
+    </div>
+    <div className="extra content">
+      <span className="right floated">
+        Joined in 2014
+      </span>
+      <span>
+        <i className="user icon"></i>
+        151 Friends
+      </span>
+    </div>
+  </div>
+  <div className="card">
+    <div className="image">
+      <img src="/images/andy.jpg"/>
+    </div>
+    <div className="content">
+      <div className="header">Andy Le</div>
+      <div className="meta">
+        <a>Co-Founder and Software Developer</a>
+      </div>
+      <div className="description">
+        Andy is a student at the University of Arizona
+      </div>
+    </div>
+    <div className="extra content">
+      <span className="right floated">
+        Joined in 2014
+      </span>
+      <span>
+        <i className="user icon"></i>
+        151 Friends
+      </span>
+    </div>
+  </div>
+  <div className="card">
+    <div className="image">
+      <img src="/images/tristan.jpg"/>
+    </div>
+    <div className="content">
+      <div className="header">Tristan Farrell</div>
+      <div className="meta">
+        <a>Co-Founder and Software Developer</a>
+      </div>
+      <div className="description">
+        Tristan is a student at the University of Arizona
+      </div>
+    </div>
+    <div className="extra content">
+      <span className="right floated">
+        Joined in 2014
+      </span>
+      <span>
+        <i className="user icon"></i>
+        151 Friends
+      </span>
+    </div>
+  </div>
 </div>
 </Box>
+<Members></Members>
 </Box>
   )};
 
