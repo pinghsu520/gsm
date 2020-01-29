@@ -1,6 +1,6 @@
 import React from 'react';
 import './Events.css';
-
+import Button from '@material-ui/core/Button';
 class SubPages extends React.Component {
     render() {
         return (
@@ -11,21 +11,16 @@ class SubPages extends React.Component {
             <hr className="my-4"></hr>
             <p id="sub-text">It uses utility classes for typography and spacing to space content out within the larger container.</p>
             <a className="btn btn-primary btn-lg" href="/board_of_directors" role="button">Learn more</a>
-           </p>
-            <p className="jumbotron">
             <h1 className="display-4">Schedule Meeting </h1>
             <img  id="sub-img" src="/images/image-4.jpg" class="ui fluid image"></img>
             <hr className="my-4"></hr>
             <p id="sub-text">It uses utility classes for typography and spacing to space content out within the larger container.</p>
             <a className="btn btn-primary btn-lg" href="/responsibility" role="button">Learn more</a>
-            </p>
-    
-            <p className="jumbotron">
             <h1 className="display-4">Contact </h1>
             <img  id="sub-img" src="/images/image-4.jpg" class="ui fluid image" />
             <hr className="my-4"></hr>
             <p id="sub-text">It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <a className="btn btn-primary btn-lg" href="/responsibility" role="button">Learn more</a>
+            <Button variant="outlined" color="primary" size="sm">Default</Button>
           </p>
      
             </div>
