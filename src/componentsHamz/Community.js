@@ -7,6 +7,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '../components/materialUiComps/Button';
 import Typography from '../components/materialUiComps/Typography';
 import ProductHeroLayout from '../components/sponsorPages/views/ProductHeroLayout';
+import Footer from '../Footer';
+
 
 const backgroundImage =
   'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80';
@@ -48,6 +50,7 @@ function ProductHero(props) {
     </Typography>
   </ProductHeroLayout>
   <SubPages/>
+  <Footer />
   </React.Fragment>
 
   );

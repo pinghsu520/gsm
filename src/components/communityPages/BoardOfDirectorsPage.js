@@ -1,7 +1,9 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/core/styles';
-import Members from './ProductCategories';
+import Members from './Members';
+import Footer from '../../Footer';
+
 
 const useStyles = makeStyles({
   root: {
@@ -168,6 +170,7 @@ export default function BoardOfDirectorsPage(){
 </div>
 </Box>
 <Members></Members>
+<Footer />
 </Box>
   )};
 

@@ -27,7 +27,7 @@ class BootMenu extends React.Component {
 		      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
 		      <Button variant="outline-primary">Search</Button>
 		    </Form> */}
-			<Nav.Link href="/community/social_impact"><i class="big red heart icon" ></i></Nav.Link>
+			<Nav.Link href="/community/social_impact"><i className="big red heart icon" ></i></Nav.Link>
 			
 		  </Navbar>
 			</div>

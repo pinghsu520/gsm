@@ -3,6 +3,8 @@ import withRoot from '../materialUiComps/withRoot';
 import React from 'react';
 import ProductHero from './views/ProductHero';
 import ProductValues from './views/ProductValues';
+import Footer from '../../Footer';
+
 
 function PressPage() {
   return (
@@ -15,6 +17,7 @@ function PressPage() {
       {/* <ProductCTA /> */}
       {/* <ProductSmokingHero /> */}
       {/* <AppFooter /> */}
+      <Footer/>
     </React.Fragment>
   );
 }

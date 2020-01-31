@@ -25,14 +25,14 @@ import FutureEventsPage from '../components/sponsorPages/FutureEventsPage';
 import SponsorsPage from '../components/sponsorPages/SponsorsPage';
 import SponsorTiersPage from '../components/sponsorPages/SponsorTiersPage';
 import SponsorFormPage from '../components/sponsorPages/SponsorFormPage';
-import Footer from '../components/Footer';
+import Connect from '../components/Connect';
 import AboutUs from '../components/AboutUs';
 import BootMenu from '../components/master/BootMenu';
+import Members from '../components/communityPages/Members';
 
 
 const AppRouter = () => (
   <BrowserRouter >
-    <div>
       <BootMenu />
       <Switch>
         <Route path="/" component={Home} exact={true} />
@@ -40,7 +40,7 @@ const AppRouter = () => (
         <Route path="/community" component={Community} exact={true} />
         <Route path="/community/non_profit_representation" component={NPRepresentationPage} />
         <Route path="/community/why_non_profit" component={WhyNPPage} />
-        <Route path="/community/board_of_directors" component={BoardOfDirectorsPage} />
+        <Route path="/community/board_of_directors" component={Members} />
         <Route path="/community/social_impact" component={SocialImpactPage} />
         <Route path="/community/responsibility" component={ResponsibilityPage} />
         <Route path="/events" component={EventsPage} exact={true}/>
@@ -51,10 +51,9 @@ const AppRouter = () => (
         <Route path="/sponsors/donations" component={DonationPage} />
         <Route path="/sponsors/tiers" component={SponsorTiersPage} />
         <Route path="/press" component={PressPage} exact={true}/>
+        <Route path="/connect" component={Connect}/>
         <Route component={NotFoundPage} />
       </Switch>
-      <Footer />
-    </div>
     
   </BrowserRouter>
 );

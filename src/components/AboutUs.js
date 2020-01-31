@@ -15,6 +15,8 @@ import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import { NavLink } from 'react-router-dom';
 import '../App.css';
+import Footer from '../Footer';
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -135,6 +137,7 @@ export default function AboutUs() {
           </Grid>
         </Container>
       </main>
+      <Footer/>
     </React.Fragment>
   );
 }
