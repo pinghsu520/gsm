@@ -7,10 +7,10 @@ import PastSuccess from './components/pastSuccess';
 import StepSuccess from './components/stepSuccess';
 import WhatWeDo from './components/whatWeDo';
 import Buttons from './components/buttons';
-import Background from './components/cardbackground';
 import BootMenu from './components/BootMenu';
 import './index.css';
-import Box from './components/container';
+import Result from './components/results';
+
 
 // test
 
@@ -18,16 +18,21 @@ const children = [
     <div className="Slideshow red" key="red">
         <SlideShow />
     </div>,
-    <div className="page orange" key="orange">
-        
+
+
+    <div className="page pastsuccess" key="pastsuccess">
         <PastSuccess />
     </div>,
-    <div className="page yellow" key="yellow">
+
+
+    <div className="page whatWedo" key="whatWedo">
         <WhatWeDo />
     </div>,
-    <div className="page green" key="green">
-        <h2><span>Snap</span><span>Scroll</span></h2>
+
+    <div className="page results" key="results">
+        <Result />
     </div>,
+
     <div className="page blue" key="blue">
         <h2><span>Snap</span><span>Scroll</span></h2>
     </div>,
