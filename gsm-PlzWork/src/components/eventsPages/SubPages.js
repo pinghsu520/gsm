@@ -20,7 +20,7 @@ class SubPages extends React.Component {
             <img  id="sub-img" src="/images/image-4.jpg" class="ui fluid image" />
             <hr className="my-4"></hr>
             <p id="sub-text">It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <Button variant="outlined" color="primary" size="sm">Default</Button>
+            <Button variant="outlined" color="primary">Default</Button>
           </p>
      
             </div>

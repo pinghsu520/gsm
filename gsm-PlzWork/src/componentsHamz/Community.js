@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import SubPages from './SubPages';
-import './Community.css';
+// import './Community.css';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '../components/materialUiComps/Button';

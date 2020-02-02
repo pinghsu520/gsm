@@ -42,7 +42,7 @@ function ProductHero(props) {
     </Typography>
     <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
       Become a Sponsor Today
-    </Typography>
+    </Typography> 
   </ProductHeroLayout>
   </React.Fragment>
 

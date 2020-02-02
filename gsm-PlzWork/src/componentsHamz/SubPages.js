@@ -1,5 +1,5 @@
 import React from 'react';
-import './Community.css';
+// import './Community.css';
 
 class BoardOfDirectors extends React.Component {
     render() {
