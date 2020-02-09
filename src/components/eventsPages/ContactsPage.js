@@ -1,9 +1,15 @@
+import withRoot from '../materialUiComps/withRoot';
 import React from 'react';
+import Connect from '../Connect';
+import Footer from '../../Footer';
 
-const ContactsPage = () => (
-  <div>
-    This is from my ContactsPage component
-  </div>
-);
 
-export default ContactsPage;
+function Schedule(){
+  return(
+    <React.Fragment>
+      <Connect />
+      <Footer />
+    </ React.Fragment>
+  )
+}
+export default withRoot(Schedule);

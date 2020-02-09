@@ -1,120 +1,152 @@
-import React, { Component } from 'react';
-import ReactSnapScroll from 'react-snap-scroll';
+import React from 'react';
+import Menu  from './PingAndy/Menu';
+import SlideShow from './PingAndy/slideShow';
+import PastSuccess from './PingAndy/pastSuccess';
+import StepSuccess from './PingAndy/stepSuccess';
+import PanelOne from './PingAndy/panelOne';
+import PanelTwo from './PingAndy/panelTwo';
+import PanelThree from './PingAndy/panelThree';
+import PanelFour from './PingAndy/panelFour';
 import '../App.css';
-import Menu  from './master/Menu';
-import SlideShow from './master/slideShow';
-import PastSuccess from './master/pastSuccess';
-import StepSuccess from './master/stepSuccess';
-import WhatWeDo from './master/whatWeDo';
-import Buttons from './master/buttons';
-import Background from './master/cardbackground';
-import BootMenu from './master/BootMenu';
 
-const children = [
-    <div className="Slideshow red" key="red">
 
-        <SlideShow />
-    </div>,
-    <div className="page orange" key="red">
-        <h2><span>Snap</span><span>Scroll</span></h2>
-        <PastSuccess />
-    </div>,
-    <div className="page yellow" key="orange">
-        <h2><span>Snap</span><span>Scroll</span></h2>
-        <WhatWeDo />
-    </div>,
-    <div className="page green" key="green">
-        <h2><span>Snap</span><span>Scroll</span></h2>
-    </div>,
-    <div className="page blue" key="blue">
-        <h2><span>Snap</span><span>Scroll</span></h2>
-    </div>,
-    <div className="page purple" key="purple">
-        <h2><span>Snap</span><span>Scroll</span></h2>
-    </div>,
-];
 
-class HomePage extends React.Component{
+const Home = () => (
+    <div className='App'>      
 
-    state = {
-        transition: 'move-top-bottom',
-        index: 0,
-    }
+        <div className="page green" key="red">
+     <SlideShow />
+     </div>
+        <PanelOne />
+        <PanelTwo />
+        <PanelThree />
+        <PanelFour />
+    </div>
+);
 
-    transitionChanged = e => {
-        this.setState({ [e.target.name]: e.target.value });
-    }
+export default Home;
 
-    indexChanged = index => {
-        this.setState({ index });
-    }
+// import React, { Component } from 'react';
+// import ReactSnapScroll from 'react-snap-scroll';
+// import Menu  from './master/Menu';
+// import SlideShow from './master/slideShow';
+// import PastSuccess from './master/pastSuccess';
+// import StepSuccess from './master/stepSuccess';
+// import WhatWeDo from './master/whatWeDo';
+// import Buttons from './master/buttons';
+// import BootMenu from './master/BootMenu';
+// import Result from './master/results';
+// import '../index.css';
+// import '../App.css'
+
+
+// const children = [
+//     <div className="slideShow red" key="red">
+//     <SlideShow />
+//     </div>,
+
+
+//     <div className="page results" key="results">
+//         <PastSuccess />
+//     </div>,
+
+
+//     <div className="page whatWedo" key="whatWedo">
+//         <WhatWeDo />
+//     </div>,
+
+//     <div className="page results" key="results">
+//         <Result />
+//     </div>,
+//     <div className="page whatWedo" key="whatWedo">
+//         <h2><span>Snap</span><span>Scroll</span></h2>
+//     </div>,
+//     <div className="page results" key="results">
+//         <h2><span>Snap</span><span>Scroll</span></h2>
+//     </div>,
+// ];
+
+// class HomePage extends React.Component{
+
+//     state = {
+//         transition: 'move-top-bottom',
+//         index: 0,
+//     }
+
+//     transitionChanged = e => {
+//         this.setState({ [e.target.name]: e.target.value });
+//     }
+
+//     indexChanged = index => {
+//         this.setState({ index });
+//     }
     
-    render() {
+//     render() {
 
-        const { transition, index } = this.state;
+//         const { transition, index } = this.state;
 
-        return (
-            <div className="App">
-                <ReactSnapScroll
-                    transition={ transition }
-                    indexChanged={ this.indexChanged }
-                >
-                    { children.map(child => child) }
-                </ReactSnapScroll>
+//         return (
+//             <div className="App">
+//                 <ReactSnapScroll
+//                     transition={ transition }
+//                     indexChanged={ this.indexChanged }
+//                 >
+//                     { children.map(child => child) }
+//                 </ReactSnapScroll>
                 
-                <div className="pagination">
-                    { index + 1 } / { children.length }
-                </div>
-            </div>
-        );
+//                 <div className="pagination">
+//                     { index + 1 } / { children.length }
+//                 </div>
+//             </div>
+//         );
 
-    }
-  }
+//     }
+//   }
 
 
-export default function Home(){
-  console.log("working")
-  return(
-    <HomePage/>
+// export default function Home(){
+//   console.log("working")
+//   return(
+//     <HomePage/>
     
-  )
-};
+//   )
+// };
 
-// import React from 'react';
-// import Menu  from './PingAndy/Menu';
-// import SlideShow from './PingAndy/slideShow';
-// import PastSuccess from './PingAndy/pastSuccess';
-// import StepSuccess from './PingAndy/stepSuccess';
+// // import React from 'react';
+// // import Menu  from './PingAndy/Menu';
+// // import SlideShow from './PingAndy/slideShow';
+// // import PastSuccess from './PingAndy/pastSuccess';
+// // import StepSuccess from './PingAndy/stepSuccess';
 
 
-// const Home = () => (
-//     <div>      
+// // const Home = () => (
+// //     <div>      
        
-//         <br/>
-//         <br/>
-//         <br/>
+// //         <br/>
+// //         <br/>
+// //         <br/>
 
-//   		<SlideShow />
+// //   		<SlideShow />
 
   		
-//       <br/>
-//       <br/>
-//       <br/>
-//       <br/>    
+// //       <br/>
+// //       <br/>
+// //       <br/>
+// //       <br/>    
     
-//       <PastSuccess />
-//       <br/>
-//       <br/>
-//       <br/>
-//       <br/>  
-//       <StepSuccess/>
+// //       <PastSuccess />
+// //       <br/>
+// //       <br/>
+// //       <br/>
+// //       <br/>  
+// //       <StepSuccess/>
 
-//       <br/>
-//       <br/>
-//       <br/>
-//       <br/>
+// //       <br/>
+// //       <br/>
+// //       <br/>
+// //       <br/>
 
-//     </div>
-// );
+// //     </div>
+// // );
 
-// export default Home;
+// // export default Home;
