@@ -5,14 +5,14 @@ class StepSuccess extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1>
+				{/* <h1>
 					steps success class
-				</h1>
+				</h1> */}
 
-				<div className="ui divider"></div>
+				{/* <div className="ui divider"></div> */}
 
 				<img className="ui fluid image" src={lake} />
-				<div className="ui divider"></div>
+				{/* <div className="ui divider"></div> */}
 			</div>
 		)
 	}
