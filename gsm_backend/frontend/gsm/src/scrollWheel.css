@@ -1,0 +1,138 @@
+.scrollWheel {
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    background: #222;
+
+    font-family: 'Courier New', serif;
+
+}
+
+.scrollWheel .page {
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 50px;
+    text-transform: uppercase;
+
+}
+
+.scrollWheel .page h2 span:first-of-type {
+    font-weight: 100;
+    color: rgba(0, 0, 0, .5);
+}
+
+.scrollWheel .page h2 span:last-of-type {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
+}
+
+.scrollWheel .red {
+    background: #DC143C;
+}
+
+.scrollWheel .orange {
+    background: #FF8C00;
+}
+
+.scrollWheel .yellow {
+    background: #FFD700;
+}
+
+.scrollWheel .green {
+    background: #6B8E23;
+}
+
+.scrollWheel .blue {
+    background: #4682B4;
+}
+
+.scrollWheel .purple {
+    background: #9932CC;
+}
+
+.scrollWheel .controls,
+.scrollWheel .pagination {
+
+    position: absolute;
+
+    padding: 1vw;
+
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, .25);
+
+}
+
+.scrollWheel .controls {
+    top: 1vw;
+    right: 1vw;
+}
+
+.scrollWheel .controls h3 {
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+
+.scrollWheel .pagination {
+    bottom: 1vw;
+    left: 1vw;
+}
+
+@media (max-width: 768px) {
+
+    .scrollWheel .page {
+        font-size: 22px;
+    }
+
+    .scrollWheel .controls {
+        top: 2vw;
+        right: 2vw;
+        padding: 2vw;
+    }
+
+    .scrollWheel .controls h3 {
+        margin: 0 0 5px;
+    }
+
+}
+
+/* Override transition. */
+/*
+.ReactSnapScroll .akasaka-forward-enter {
+    transform: translateX(100%);
+}
+
+.ReactSnapScroll .akasaka-reverse-enter {
+    transform: translateX(-100%);
+}
+
+.ReactSnapScroll .akasaka-forward-enter-active,
+.ReactSnapScroll .akasaka-reverse-enter-active {
+    transition: transform 1000ms ease-in-out;
+    transform: translateX(0);
+}
+
+.ReactSnapScroll .akasaka-forward-exit,
+.ReactSnapScroll .akasaka-reverse-exit {
+    transform: translateX(0);
+}
+
+.ReactSnapScroll .akasaka-forward-exit-active {
+    transition: transform 1000ms ease-in-out;
+    transform: translateX(-100%);
+}
+
+.ReactSnapScroll .akasaka-reverse-exit-active {
+    transition: transform 1000ms ease-in-out;
+    transform: translateX(100%);
+}
+*/
