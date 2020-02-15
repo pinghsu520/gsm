@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e236f6fe.chunk.css",
+    "main.js": "/static/js/main.5a347cb6.chunk.js",
+    "main.js.map": "/static/js/main.5a347cb6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.107bb8ca.js",
+    "runtime-main.js.map": "/static/js/runtime-main.107bb8ca.js.map",
+    "static/css/2.51f04da4.chunk.css": "/static/css/2.51f04da4.chunk.css",
+    "static/js/2.dcc4e0ad.chunk.js": "/static/js/2.dcc4e0ad.chunk.js",
+    "static/js/2.dcc4e0ad.chunk.js.map": "/static/js/2.dcc4e0ad.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.b0509c2cbf7655d7b0000b65f5d51632.js": "/precache-manifest.b0509c2cbf7655d7b0000b65f5d51632.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.51f04da4.chunk.css.map": "/static/css/2.51f04da4.chunk.css.map",
+    "static/css/main.e236f6fe.chunk.css.map": "/static/css/main.e236f6fe.chunk.css.map",
+    "static/js/2.dcc4e0ad.chunk.js.LICENSE": "/static/js/2.dcc4e0ad.chunk.js.LICENSE",
+    "static/media/NatureLake.jpg": "/static/media/NatureLake.8cfc12c0.jpg",
+    "static/media/img_fjords_wide.jpg": "/static/media/img_fjords_wide.79a9052d.jpg",
+    "static/media/img_mountains_wide.jpg": "/static/media/img_mountains_wide.f7f3ce3f.jpg",
+    "static/media/img_nature_wide.jpg": "/static/media/img_nature_wide.d73dd0b6.jpg",
+    "static/media/natureFlower.jpg": "/static/media/natureFlower.65c542e9.jpg",
+    "static/media/redFlowers.jpg": "/static/media/redFlowers.da4153fd.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.107bb8ca.js",
+    "static/css/2.51f04da4.chunk.css",
+    "static/js/2.dcc4e0ad.chunk.js",
+    "static/css/main.e236f6fe.chunk.css",
+    "static/js/main.5a347cb6.chunk.js"
+  ]
+}
