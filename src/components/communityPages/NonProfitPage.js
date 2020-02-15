@@ -4,10 +4,9 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '../materialUiComps/Button';
 import Typography from '../materialUiComps/Typography';
 import ProductHeroLayout from '../sponsorPages/views/ProductHeroLayout';
-import Footer from '../../Footer';
 
 const backgroundImage =
-  'https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80';
+  'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=60';
 
 const styles = theme => ({
   background: {
@@ -39,13 +38,12 @@ function ProductHero(props) {
     {/* Increase the network loading priority of the background image. */}
     <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />
     <Typography color="inherit" align="center" variant="h1" marked="center">
-       Non-Profit Representation
+      Non Profits
     </Typography>
-    {/* <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
+    <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
       Become a Sponsor Today
-    </Typography>  */}
+    </Typography>
   </ProductHeroLayout>
-  <Footer />
   </React.Fragment>
 
   );
@@ -56,3 +54,31 @@ ProductHero.propTypes = {
 };
 
 export default withStyles(styles)(ProductHero);
+
+// class Community extends React.Component {
+  
+//     render() {
+//         return (
+//                 <div>
+//                 <SubPages />
+
+//                 </div>  
+                
+//         )
+//     }
+// };
+
+// export default Community;
+
+
+// import React from 'react';
+// //import image from "images/GSMLogo.jpg";
+
+// const NPRepresentationPage = () => (
+//   <div>
+//      <img className="ui fluid image" src="../images/GSMLogo.jpg"/>
+//     This is from my NPRepresentationPage component
+//   </div>
+// );
+
+// export default NPRepresentationPage;

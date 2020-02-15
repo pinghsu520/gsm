@@ -102,7 +102,7 @@ function ProductCategories(props) {
     {
       url:
       'https://images.unsplash.com/photo-1442850473887-0fb77cd0b337?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
-      title: 'Mother Nature',
+      title: 'Nature',
       width: '40%',
     },
     {
@@ -120,25 +120,25 @@ function ProductCategories(props) {
     {
       url:
         'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=400&q=80',
-      title: 'Shopping',
+      title: 'Children',
       width: '24%',
     },
     {
       url:
         'https://images.unsplash.com/photo-1506941433945-99a2aa4bd50a?auto=format&fit=crop&w=400&q=80',
-      title: 'Walking',
+      title: 'Trade Schools',
       width: '40%',
     },
     {
       url:
         'https://images.unsplash.com/photo-1533727937480-da3a97967e95?auto=format&fit=crop&w=400&q=80',
-      title: 'Fitness',
+      title: 'Art',
       width: '20%',
     },
     {
       url:
         'https://images.unsplash.com/photo-1518136247453-74e7b5265980?auto=format&fit=crop&w=400&q=80',
-      title: 'Reading',
+      title: 'Future',
       width: '40%',
     },
   ];

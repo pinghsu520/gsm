@@ -90,6 +90,27 @@ function Members(props) {
   const images = [
     {
       url:
+        'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=400&q=80',
+      title: 'Rody Espanol',
+      width: '33.33%',
+      position: "President and Co-Founder"
+    },
+    {
+      url:
+        'https://images.unsplash.com/photo-1523309996740-d5315f9cc28b?auto=format&fit=crop&w=400&q=80',
+      title: 'Marc Beilin',
+      width: '33.33%',
+      position: "Vice-President and Co-Founder"
+    },
+    {
+      url:
+        '"/images/hamzah.jpg"',
+      title: 'Hamzah Firman',
+      width: '33.33%',
+      position: "Software Developer and Co-Founder"
+    },
+    {
+      url:
         '"/images/tristan.jpg"',
       title: 'Tristan Farrell',
       width: '33.33%',
@@ -108,28 +129,8 @@ function Members(props) {
       title: 'Ping Hsu',
       width: '33.33%',
       position: "Software Developer and Co-Founder"
-    },
-    {
-      url:
-        '"/images/hamzah.jpg"',
-      title: 'Hamzah Firman',
-      width: '38%',
-      position: "Software Developer and Co-Founder"
-    },
-    {
-      url:
-        'https://images.unsplash.com/photo-1523309996740-d5315f9cc28b?auto=format&fit=crop&w=400&q=80',
-      title: 'Marc Beline',
-      width: '38%',
-      position: "Vice-President and Co-Founder"
-    },
-    {
-      url:
-        'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=400&q=80',
-      title: 'Rody Espanol',
-      width: '24%',
-      position: "President and Co-Founder"
     }
+    
   ];
 
   return (

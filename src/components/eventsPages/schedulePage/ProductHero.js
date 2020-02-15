@@ -49,6 +49,7 @@ function ProductHero(props) {
         className={classes.button}
         component="a"
         href="https://forms.gle/8De6zYV7CyLXP5EF8"
+        target="_blank"
       >
         Schedule Now
       </Button>

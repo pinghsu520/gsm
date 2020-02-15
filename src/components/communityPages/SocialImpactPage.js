@@ -17,7 +17,7 @@ function SocialImpactPage() {
     <React.Fragment>
       {/* <AppAppBar /> */}
       <ProductHero />
-      {/* <ProductValues /> */}
+      <ProductValues />
       <ProductCategories />
       {/* <ProductHowItWorks /> */}
       {/* <ProductCTA /> */}

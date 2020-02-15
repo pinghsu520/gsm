@@ -57,7 +57,7 @@ export default function BoardOfDirectorsPage(){
       <img src="/images/image-1.jpg"/>
     </div>
     <div className="content">
-      <div className="header">Marc Beilein</div>
+      <div className="header">Marc Beilin</div>
       <div className="meta">
         <span className="date">Vice-President and Co-Founder</span>
       </div>
