@@ -29,7 +29,20 @@
 }
 
 
-.App .page {
+.App .page2{
+
+    position: relative;
+
+    display: flex;
+    align-items: top;
+    justify-content: center;
+
+    font-size: 50px;
+    text-transform: uppercase;
+
+}
+
+.App .page3 {
 
     position: relative;
 
@@ -40,7 +53,14 @@
     font-size: 50px;
     text-transform: uppercase;
 
+    width: 320px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0; 
+
 }
+
+
 
 .App .page h2 span:first-of-type {
     font-weight: 100;
@@ -59,13 +79,13 @@
 
 .App .pastsuccess {
 
-    background-image: url('./images/redFlowers.jpg');
+    background-image: url('./images/office_computers.jpg');
 
 }
 
 .App .whatWedo {
    
-    background-image: url(./images/NatureLake.jpg);
+    background-image: url(./images/community.jpg);
 }
 
 .App .results {

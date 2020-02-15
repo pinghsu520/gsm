@@ -20,7 +20,7 @@ class SlideShow extends React.Component {
 				      alt="First slide"
 				    />
 				    <Carousel.Caption>
-				      <h3>First slide label</h3>
+				      <h3>First</h3>
 				      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 				    </Carousel.Caption>
 				  </Carousel.Item>

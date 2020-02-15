@@ -3,9 +3,9 @@ import ReactSnapScroll from 'react-snap-scroll';
 import './App.css';
 import Menu  from './components/Menu';
 import SlideShow from './components/slideShow';
-import PastSuccess from './components/pastSuccess';
+import Buisness from './components/buisness';
 import StepSuccess from './components/stepSuccess';
-import WhatWeDo from './components/whatWeDo';
+import NonProfit from './components/nonProfit';
 import Buttons from './components/buttons';
 import BootMenu from './components/BootMenu';
 import './index.css';
@@ -20,13 +20,13 @@ const children = [
     </div>,
 
 
-    <div className="page pastsuccess" key="pastsuccess">
-        <PastSuccess />
+    <div className="page2 pastsuccess" key="pastsuccess">
+        <Buisness />
     </div>,
 
 
-    <div className="page whatWedo" key="whatWedo">
-        <WhatWeDo />
+    <div className="page3 whatWedo" key="whatWedo">
+        <NonProfit />
     </div>,
 
     <div className="page results" key="results">
