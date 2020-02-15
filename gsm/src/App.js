@@ -9,7 +9,9 @@ import NonProfit from './components/nonProfit';
 import Buttons from './components/buttons';
 import BootMenu from './components/BootMenu';
 import './index.css';
-import Result from './components/results';
+import Education from './components/education';
+import OurStory from './components/ourStory';
+
 
 
 // test
@@ -29,15 +31,15 @@ const children = [
         <NonProfit />
     </div>,
 
-    <div className="page results" key="results">
-        <Result />
+    <div className="page4 results" key="results">
+        <Education />
     </div>,
 
-    <div className="page blue" key="blue">
-        <h2><span>Snap</span><span>Scroll</span></h2>
+    <div className="page5 ourStory" key="ourStory">
+        <OurStory />
     </div>,
-    <div className="page purple" key="purple">
-        <h2><span>Snap</span><span>Scroll</span></h2>
+    <div className="page6 purple" key="purple">
+        <StepSuccess />
     </div>,
 ];
 

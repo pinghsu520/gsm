@@ -53,10 +53,48 @@
     font-size: 50px;
     text-transform: uppercase;
 
-    width: 320px;
-    padding: 10px;
-    border: 5px solid gray;
-    margin: 0; 
+
+}
+
+.App .page4 {
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 50px;
+    text-transform: uppercase;
+
+
+}
+
+.App .page5 {
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 50px;
+    text-transform: uppercase;
+
+
+}
+
+.App .page6 {
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 50px;
+    text-transform: uppercase;
+
 
 }
 
@@ -89,15 +127,15 @@
 }
 
 .App .results {
-    background-image: url(./images/redFlowers.jpg);
+    background-image: url(./images/educationImage.jpg);
 }
 
-.App .blue {
-    background: #4682B4;
+.App .ourStory {
+    background-image: url(./images/greyslate.jpg);
 }
 
 .App .purple {
-    background: #9932CC;
+    background-image: url(./images/nature.jpg);;
 }
 
 .App .controls,

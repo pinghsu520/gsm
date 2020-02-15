@@ -4,15 +4,10 @@ import lake from '../images/NatureLake.jpg';
 class StepSuccess extends React.Component {
 	render() {
 		return (
-			<div>
-				<h1>
-					steps success class
-				</h1>
-
-				<div class="ui divider"></div>
-
-				<img class="ui fluid image" src={lake} />
-				<div class="ui divider"></div>
+			<div style = {{ color: 'white'}}>
+				<h1>Substainblity</h1>
+				<p>How to impact business and community -How will it grow and substain </p>
+					
 			</div>
 		)
 	}

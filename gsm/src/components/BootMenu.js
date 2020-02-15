@@ -9,7 +9,7 @@ class BootMenu extends React.Component {
 	render() {
 		return (
 			<div>
-				<Navbar bg="light" variant="light">
+				<Navbar bg="light" variant="blue">
 		    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
 		    <Nav className="mr-auto">
 		      <Nav.Link href="#pricing">GRAY SLATE MEDIA</Nav.Link>

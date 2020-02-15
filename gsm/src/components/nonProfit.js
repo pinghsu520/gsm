@@ -9,12 +9,20 @@ class nonProfit extends React.Component {
 		const mystyle = {
 	      color: "white",
 	      backgroundColor: "DodgerBlue",
-	      padding: "100px",
-	      fontFamily: "Arial"
+	      padding: "0px",
+	      fontFamily: "Arial",
+	      width: "1000px",
+		  height: "600px",
+		  padding: "50px",
+		  border: "1px solid white",
 	      }
 		return (
 			<div style ={ mystyle }>
-				<p> What we do </p>
+				<h1> Non Profit </h1>
+				<p> Include non profit org. in assisting their revenue stream
+					Assit in developing sponsorship 
+					Assit in developing their fundrasing events ie golf
+				</p>
 			</div>
 		)
 	}
