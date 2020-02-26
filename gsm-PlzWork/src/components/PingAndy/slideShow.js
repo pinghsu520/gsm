@@ -2,9 +2,10 @@ import React from 'react';
 //import Carousel from 'react-bootstrap/Carousel';
 import Carousel from 'react-bootstrap/Carousel';
 
-import img1 from '../images/img_nature_wide.jpg';
+import img1 from '../images/BBQ_Showdown.png';
 import img2 from '../images/img_mountains_wide.jpg';
 import img3 from '../images/img_fjords_wide.jpg';
+
 
 class SlideShow extends React.Component {
 
@@ -14,17 +15,20 @@ class SlideShow extends React.Component {
 				{/* <h1>
 					This is start of slideshow
 				</h1> */}
-				
+				<br></br>
 				<Carousel>
-				  <Carousel.Item>
+				  <Carousel.Item >
 				    <img
 				      className="d-block w-100"
 				      src={img1}
-				      alt="First slide"
+					  alt="First slide"
+					  
 				    />
 				    <Carousel.Caption>
-				      <h3>First slide label</h3>
-				      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+					<a className="btn btn-primary btn-lg" href="/community/social_impact" role="button">BBQ Showdown</a>
+
+				      {/* <h3 >First slide label</h3> */}
+				      {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
 				    </Carousel.Caption>
 				  </Carousel.Item>
 				 
@@ -56,6 +60,8 @@ class SlideShow extends React.Component {
 				    </Carousel.Caption>
 				  </Carousel.Item>
 				</Carousel>
+				<br></br>
+				<br></br>
 
 
 

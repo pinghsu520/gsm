@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '../materialUiComps/Button';
 import Typography from '../materialUiComps/Typography';
 import ProductHeroLayout from '../sponsorPages/views/ProductHeroLayout';
+import EventCategories from './EventCategories';
 
 const backgroundImage =
   'https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80';
@@ -39,13 +40,15 @@ function ProductHero(props) {
     {/* Increase the network loading priority of the background image. */}
     <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />
     <Typography color="inherit" align="center" variant="h1" marked="center">
-      Event
+      Events
     </Typography>
     <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
       This is our event page
     </Typography>
   </ProductHeroLayout>
+  <EventCategories/>
   <SubPages/>
+
   </React.Fragment>
 
   );
@@ -55,20 +58,6 @@ ProductHero.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
+
 export default withStyles(styles)(ProductHero);
-
-// class Community extends React.Component {
-  
-//     render() {
-//         return (
-//                 <div>
-//                 <SubPages />
-
-//                 </div>  
-                
-//         )
-//     }
-// };
-
-// export default Community;
 

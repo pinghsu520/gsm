@@ -1,9 +1,17 @@
+import withRoot from '../materialUiComps/withRoot';
 import React from 'react';
+import ProductValues from './schedulePage/ProductValues';
+import ProductHero from './schedulePage/ProductHero';
+import Footer from '../../Footer';
 
-const SchedulePage = () => (
-  <div>
-    This is from my SchedulePage component
-  </div>
-);
 
-export default SchedulePage;
+function Schedule(){
+  return(
+    <React.Fragment>
+      <ProductHero />
+      {/* <ProductValues /> */}
+      <Footer />
+    </ React.Fragment>
+  )
+}
+export default withRoot(Schedule);

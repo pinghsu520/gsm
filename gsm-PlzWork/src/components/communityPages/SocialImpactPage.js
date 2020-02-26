@@ -1,84 +1,31 @@
-import React, { Suspense } from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Button from '../materialUiComps/Button';
-import Typography from '../materialUiComps/Typography';
-import ProductHeroLayout from '../sponsorPages/views/ProductHeroLayout';
+import withRoot from '../materialUiComps/withRoot';
+// --- Post bootstrap -----
+import React from 'react';
+import ProductCategories from './views/ProductCategories';
+import ProductSmokingHero from './views/ProductSmokingHero';
+import AppFooter from './views/AppFooter';
+import ProductHero from './views/ProductHero';
+import ProductValues from './views/ProductValues';
+import ProductHowItWorks from './views/ProductHowItWorks';
+import ProductCTA from './views/ProductCTA';
+import AppAppBar from './views/AppAppBar';
+import Footer from '../../Footer';
 
-const backgroundImage =
-  'https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80';
 
-const styles = theme => ({
-  background: {
-    backgroundImage: `url(${backgroundImage})`,
-    backgroundColor: '#7fc7d9', // Average color of the background image.
-    backgroundPosition: 'center',
-  },
-  button: {
-    minWidth: 200,
-  },
-  h5: {
-    marginBottom: theme.spacing(4),
-    marginTop: theme.spacing(4),
-    [theme.breakpoints.up('sm')]: {
-      marginTop: theme.spacing(10),
-    },
-  },
-  more: {
-    marginTop: theme.spacing(2),
-  },
-});
-
-function ProductHero(props) {
-  const { classes } = props;
-
+function SocialImpactPage() {
   return (
     <React.Fragment>
-    <ProductHeroLayout backgroundClassName={classes.background}>
-    {/* Increase the network loading priority of the background image. */}
-    <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />
-    <Typography color="inherit" align="center" variant="h1" marked="center">
-       Social Impact
-    </Typography>
-    <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
-      Become a Sponsor Today
-    </Typography>
-  </ProductHeroLayout>
-  </React.Fragment>
-
+      {/* <AppAppBar /> */}
+      <ProductHero />
+      <ProductValues />
+      <ProductCategories />
+      {/* <ProductHowItWorks /> */}
+      {/* <ProductCTA /> */}
+      {/* <ProductSmokingHero /> */}
+      {/* <AppFooter /> */}
+      <Footer />
+    </React.Fragment>
   );
 }
 
-ProductHero.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(ProductHero);
-
-// class Community extends React.Component {
-  
-//     render() {
-//         return (
-//                 <div>
-//                 <SubPages />
-
-//                 </div>  
-                
-//         )
-//     }
-// };
-
-// export default Community;
-
-
-// import React from 'react';
-// //import image from "images/GSMLogo.jpg";
-
-// const NPRepresentationPage = () => (
-//   <div>
-//      <img className="ui fluid image" src="../images/GSMLogo.jpg"/>
-//     This is from my NPRepresentationPage component
-//   </div>
-// );
-
-// export default NPRepresentationPage;
+export default withRoot(SocialImpactPage);

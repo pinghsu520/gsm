@@ -14,6 +14,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import { NavLink } from 'react-router-dom';
+import '../App.css';
+import Footer from '../Footer';
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -42,25 +45,34 @@ const useStyles = makeStyles(theme => ({
   cardContent: {
     flexGrow: 1,
   },
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6),
-  },
+  cardTitles: {
+
+  }
 }));
 
 const cards = [1, 2, 3];
 
 export default function AboutUs() {
   const classes = useStyles();
-
+  const titles = ["Social Impact", "Commitment", "Non-Profit"]
+  const info = [
+    "Gray Slate works closely with the community.",
+    "Gray Slate is committed to supporting the next generation of do-ers.",
+    "Gray Slate is focused on making tommorow better than today."
+  ]
+  const links = ["/community/social_impact", "/community/responsibility", "/community/why_non_profit"]
+  const images = [
+    "https://images.unsplash.com/photo-1532929527964-ed3e9a108366?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+    "https://images.unsplash.com/photo-1507097672537-2b0effc54687?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=655&q=80",
+    "https://images.unsplash.com/photo-1534361960057-19889db9621e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+  ]
   return (
     <React.Fragment>
-      <CssBaseline />
       <main>
         {/* Hero unit */}
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
-            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+            <Typography component="h1" variant="h2" align="center" color="white" gutterBottom>
               Gray Slate... Who?
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
@@ -98,28 +110,25 @@ export default function AboutUs() {
         <Container className={classes.cardGrid} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {cards.map(card => (
+            {cards.map((card, index) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
+                    image={images[card-1]}
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                    <Typography gutterBottom variant="h3" component="h2">
+                      {titles[card-1]}
                     </Typography>
-                    <Typography>
-                      This is a media card. You can use this section to describe the content.
+                    <Typography variant="h5">
+                      {info[card-1]}
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      View
-                    </Button>
-                    <Button size="small" color="primary">
-                      Edit
+                    <Button href={links[card-1]} size="medium" color="primary">
+                      Learn More
                     </Button>
                   </CardActions>
                 </Card>
@@ -128,6 +137,7 @@ export default function AboutUs() {
           </Grid>
         </Container>
       </main>
+      <Footer/>
     </React.Fragment>
   );
 }

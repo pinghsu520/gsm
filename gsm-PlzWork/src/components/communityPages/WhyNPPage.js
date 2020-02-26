@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '../materialUiComps/Button';
 import Typography from '../materialUiComps/Typography';
 import ProductHeroLayout from '../sponsorPages/views/ProductHeroLayout';
+import Footer from '../../Footer';
 
 const backgroundImage =
   'https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80';
@@ -41,9 +42,20 @@ function ProductHero(props) {
        Why Non Profit
     </Typography>
     <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
-      Become a Sponsor Today
+      Click below to learn about who we represent
     </Typography> 
+    <Button
+        color="secondary"
+        variant="contained"
+        size="large"
+        className={classes.button}
+        component="a"
+        href="/community/non_profit_representation"
+      >
+        Non-Profit Representation
+    </Button>
   </ProductHeroLayout>
+  <Footer />
   </React.Fragment>
 
   );
@@ -54,31 +66,3 @@ ProductHero.propTypes = {
 };
 
 export default withStyles(styles)(ProductHero);
-
-// class Community extends React.Component {
-  
-//     render() {
-//         return (
-//                 <div>
-//                 <SubPages />
-
-//                 </div>  
-                
-//         )
-//     }
-// };
-
-// export default Community;
-
-
-// import React from 'react';
-// //import image from "images/GSMLogo.jpg";
-
-// const NPRepresentationPage = () => (
-//   <div>
-//      <img className="ui fluid image" src="../images/GSMLogo.jpg"/>
-//     This is from my NPRepresentationPage component
-//   </div>
-// );
-
-// export default NPRepresentationPage;

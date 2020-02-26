@@ -9,6 +9,7 @@ import ProductValues from './views/ProductValues';
 import ProductHowItWorks from './views/ProductHowItWorks';
 import ProductCTA from './views/ProductCTA';
 import AppAppBar from './views/AppAppBar';
+import Footer from '../../Footer';
 
 function SponsorsPage() {
   return (
@@ -21,6 +22,7 @@ function SponsorsPage() {
       {/* <ProductCTA /> */}
       {/* <ProductSmokingHero /> */}
       {/* <AppFooter /> */}
+      <Footer />
     </React.Fragment>
   );
 }

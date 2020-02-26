@@ -167,11 +167,18 @@ function ProductCategories(props) {
             <div className={classes.imageButton}>
               <Typography
                 component="h3"
-                variant="h6"
+                variant="h3"
                 color="inherit"
                 className={classes.imageTitle}
               >
                 {image.title}
+                <Typography
+                component="h3"
+                variant="h6"
+                color="inherit"
+                >
+                  Co-Founder
+                </Typography>
                 <div className={classes.imageMarked} />
               </Typography>
             </div>

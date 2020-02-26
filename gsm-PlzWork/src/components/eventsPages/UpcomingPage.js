@@ -4,6 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Container from '@material-ui/core/Container';
 import Typography from '../materialUiComps/Typography';
+import Footer from '../../Footer';
+import pdf from '../../files/BBQ-Sponsor.pdf';
 
 const styles = theme => ({
   root: {
@@ -97,13 +99,13 @@ function ProductCategories(props) {
       url:
         'https://images.unsplash.com/photo-1531299204812-e6d44d9a185c?auto=format&fit=crop&w=400&q=80',
       title: 'February 2020',
-      width: '20%',
+      width: '30%',
     },
     {
       url:
         'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=400&q=80',
       title: 'March 2020',
-      width: '40%',
+      width: '30%',
     },
     {
       url:
@@ -127,13 +129,13 @@ function ProductCategories(props) {
       url:
         'https://images.unsplash.com/photo-1506941433945-99a2aa4bd50a?auto=format&fit=crop&w=400&q=80',
       title: 'July 2020',
-      width: '40%',
+      width: '30%',
     },
     {
       url:
         'https://images.unsplash.com/photo-1533727937480-da3a97967e95?auto=format&fit=crop&w=400&q=80',
       title: 'August 2020',
-      width: '20%',
+      width: '30%',
     },
     {
       url:
@@ -145,7 +147,7 @@ function ProductCategories(props) {
     url:
       'https://images.unsplash.com/photo-1515103315473-6fb1f12ad433?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=60',
     title: 'October 2020',
-    width: '40%',
+    width: '30%',
   },
 {
   url:
@@ -157,7 +159,7 @@ function ProductCategories(props) {
   url:
     'https://images.unsplash.com/photo-1484818261101-b15d9ea02b7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=60',
   title: 'December 2020',
-  width: '40%',
+  width: '30%',
 },
 ]; 
 
@@ -166,6 +168,8 @@ function ProductCategories(props) {
       <Typography variant="h4" marked="center" align="center" component="h2">
         Upcoming Events
       </Typography>
+      
+      <a href={pdf} target="_blank">BBQ Showdown Sponsor Form</a>
       <div className={classes.images}>
         {images.map(image => (
           <ButtonBase
@@ -196,6 +200,7 @@ function ProductCategories(props) {
           </ButtonBase>
         ))}
       </div>
+      <Footer />
     </Container>
   );
 }
@@ -205,3 +210,23 @@ ProductCategories.propTypes = {
 };
 
 export default withStyles(styles)(ProductCategories);
+
+
+
+// import withRoot from '../materialUiComps/withRoot';
+// import React from 'react';
+// import ProductCategories from './upcomingPage/ProductCategories';
+// import ProductHero from './upcomingPage/ProductHero';
+// import Footer from '../../Footer';
+
+
+// function Schedule(){
+//   return(
+//     <React.Fragment>
+//       <ProductHero />
+//       <ProductCategories />
+//       <Footer />
+//     </ React.Fragment>
+//   )
+// }
+// export default withRoot(Schedule);
